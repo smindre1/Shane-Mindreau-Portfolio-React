@@ -1,10 +1,13 @@
 import Project from "./Project";
+import Path1 from "../assets/images/song-finder-custom-image.png"
+import Path2 from "../assets/images/Present-List-Custom-Image.png"
+import Path3 from "../assets/images/project-image-placeholder.png"
 
 const projects = [
   {
     id: 1,
     href: "https://smindre1.github.io/Project-One-Front-End-Dev/",
-    image: "./assets/images/song-finder-custom-image.png",
+    image: Path1,
     alt: "Project 1 Background",
     projectTitle: "Song Finder",
     desc: "Code Used: HTML, CSS, & JS",
@@ -13,7 +16,7 @@ const projects = [
   {
     id: 2,
     href: "https://present-list-fc60525bdd4f.herokuapp.com/",
-    image: "./assets/images/Present-List-Custom-Image.png",
+    image: Path2,
     alt: "Project 2 Background",
     projectTitle: "Present List",
     desc: "Code Used: HTML, CSS, JS, SQL",
@@ -22,7 +25,7 @@ const projects = [
   {
     id: 3,
     href: "https://github.com/smindre1/pacey",
-    image: "./assets/images/project-image-placeholder.png",
+    image: Path3,
     alt: "Project 3 Background",
     projectTitle: "Project Name 3:",
     desc: "Code Languages Used",
@@ -31,7 +34,7 @@ const projects = [
   {
     id: 4,
     href: "https://github.com/smindre1/pacey",
-    image: "./assets/images/project-image-placeholder.png",
+    image: Path3,
     alt: "Project 4 Background",
     projectTitle: "Project Name 4:",
     desc: "Code Languages Used",
@@ -40,7 +43,7 @@ const projects = [
   {
     id: 5,
     href: "https://github.com/smindre1/pacey",
-    image: "./assets/images/project-image-placeholder.png",
+    image: Path3,
     alt: "Project 5 Background",
     projectTitle: "Project Name 5",
     desc: "Code Languages Used",
@@ -54,15 +57,15 @@ function moreProjects() {
 
 function ProjectDisplay() {
   return (
-    <div class="container">
-      <h2 class="title">
+    <div className="container">
+      <h2 className="title">
         <a id="My-Work-Path">My Work</a>
       </h2>
-      <div class="project-images">
+      <div className="project-images">
         {projects.map((proj) => (
-          <Project key={proj.id} proj={proj}/>
+          <Project key={proj.id} href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc}/>
         ))}
-        <button class="portfolioBtn" onClick={moreProjects}>
+        <button className="portfolioBtn" onClick={moreProjects}>
           More Of My Work Here!
         </button>
       </div>
