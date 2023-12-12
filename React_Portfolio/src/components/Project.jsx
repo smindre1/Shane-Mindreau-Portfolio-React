@@ -1,11 +1,14 @@
-function Project(props) {
+function Project(proj) {
+    let mainImg = "";
+    proj.mainImg ? mainImg = "mainImg" : mainImg;
+
     return (
-        <a href={props.href}>
+        <a href={proj.href}>
           <figure class="figure greyOverlay">
-            <img class="MainImg opacityFilter" src={props.image} alt={props.alt} />
+            <img class= {mainImg + 'opacityFilter'} src={proj.image} alt={proj.alt} />
               <figcaption class="caption mainCaption">
-                <h3>{props.projectTitle}</h3>
-                <p>{props.desc}</p>
+                <h3>{proj.projectTitle}</h3>
+                <p>{proj.desc}</p>
               </figcaption>
           </figure>
         </a>

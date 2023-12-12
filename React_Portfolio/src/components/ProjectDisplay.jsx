@@ -48,6 +48,10 @@ const projects = [
   },
 ];
 
+function moreProjects() {
+  location.href = "https://github.com/smindre1/pacey";
+};
+
 function ProjectDisplay() {
   return (
     <div class="container">
@@ -55,12 +59,10 @@ function ProjectDisplay() {
         <a id="My-Work-Path">My Work</a>
       </h2>
       <div class="project-images">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <button class="portfolioBtn" id="additionalProjects">
+        {projects.map((proj) => (
+          <Project key={proj.id} proj={proj}/>
+        ))}
+        <button class="portfolioBtn" onClick={moreProjects}>
           More Of My Work Here!
         </button>
       </div>
