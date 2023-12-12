@@ -85,6 +85,10 @@
     border-right: thick solid var(--salmon);
   }
   
+  h3 {
+    font-size: 100%;
+  }
+
   section section {
     font-size: 100%;
   }

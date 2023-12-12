@@ -1,15 +1,16 @@
 // import Path from '../../public/images/project-image-placeholder.png';
 // proj.image
 function Project(proj) {
-    let mainImg = "";
-    proj.mainImg ? mainImg = "mainImg" : mainImg;
-    let newPath = '../assets/images/' + 'project-image-placeholder.png'
+    let mainImg;
+    let cap;
+    proj.mainImg ? mainImg = "mainImg opacityFilter" : mainImg = "opacityFilter";
+    proj.caption ? cap = "caption mainCaption" : cap = "caption subCaption";
 
     return (
         <a href={proj.href}>
           <figure className="figure greyOverlay">
-            <img className= {mainImg + 'opacityFilter'} src={proj.image} alt={proj.alt} />
-              <figcaption className="caption mainCaption">
+            <img className={mainImg} src={proj.image} alt={proj.alt} />
+              <figcaption className={cap}>
                 <h3>{proj.projectTitle}</h3>
                 <p>{proj.desc}</p>
               </figcaption>

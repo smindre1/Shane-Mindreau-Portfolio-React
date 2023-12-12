@@ -12,6 +12,7 @@ const projects = [
     projectTitle: "Song Finder",
     desc: "Code Used: HTML, CSS, & JS",
     mainImg: true,
+    caption: true,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const projects = [
     projectTitle: "Present List",
     desc: "Code Used: HTML, CSS, JS, SQL",
     mainImg: false,
+    caption: false,
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const projects = [
     projectTitle: "Project Name 3:",
     desc: "Code Languages Used",
     mainImg: false,
+    caption: false,
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ const projects = [
     projectTitle: "Project Name 4:",
     desc: "Code Languages Used",
     mainImg: false,
+    caption: false,
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const projects = [
     projectTitle: "Project Name 5",
     desc: "Code Languages Used",
     mainImg: false,
+    caption: false,
   },
 ];
 
@@ -63,7 +68,7 @@ function ProjectDisplay() {
       </h2>
       <div className="project-images">
         {projects.map((proj) => (
-          <Project key={proj.id} href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc}/>
+          <Project key={proj.id} href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc} mainImg={proj.mainImg} caption={proj.caption}/>
         ))}
         <button className="portfolioBtn" onClick={moreProjects}>
           More Of My Work Here!
