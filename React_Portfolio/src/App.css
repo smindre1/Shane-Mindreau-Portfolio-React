@@ -72,10 +72,10 @@
     margin: 0 10px 0 0;
   }
   
-  section {
+  /* section {
     color: var(--salmon);
     display: flex;
-  }
+  } */
   
   h2 {
     color: var(--salmon);

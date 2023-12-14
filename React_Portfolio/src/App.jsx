@@ -17,14 +17,3 @@ function App() {
 }
 
 export default App;
-
-/*
-Sections:
-{
-header: (name, menu)
-about Me: (title, profile img, description),
-my work: (title, 5 project images, more projects button),
-contact me: (title, links)
-}
-
-*/
