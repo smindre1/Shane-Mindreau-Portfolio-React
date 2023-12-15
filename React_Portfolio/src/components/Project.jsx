@@ -1,5 +1,3 @@
-// import Path from '../../public/images/project-image-placeholder.png';
-// proj.image
 function Project(proj) {
     let mainImg;
     let cap;

@@ -68,7 +68,9 @@ function ProjectDisplay() {
       </h2>
       <div className="project-images">
         {projects.map((proj) => (
-          <Project key={proj.id} href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc} mainImg={proj.mainImg} caption={proj.caption}/>
+          <Project key={proj.id} proj={proj}
+          
+          href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc} mainImg={proj.mainImg} caption={proj.caption}/>
         ))}
         <button className="portfolioBtn" onClick={moreProjects}>
           More Of My Work Here!

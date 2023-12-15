@@ -8,7 +8,7 @@ Through this project I wish to introduce myself, present a few of my projects to
 
 ## Usage
 
-**[`Click Here For Deployed Portfolio`]()**
+**[`Click Here For Deployed Portfolio`](https://shane-mindreau-portfolio.netlify.app/)**
 
 ## Credit
 
