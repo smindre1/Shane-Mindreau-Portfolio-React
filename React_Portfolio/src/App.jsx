@@ -1,17 +1,12 @@
-import './App.css';
-import Header from './components/Header';
-import AboutMe from './components/AboutMe';
-import ProjectDisplay from './components/ProjectDisplay';
-import Contacts from './components/Contacts';
-
+import "./App.css";
+import Header from "./components/Header";
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="mainPage">
       <Header />
-      <AboutMe />
-      <ProjectDisplay />
-      <Contacts />
+      <Outlet />
     </div>
   );
 }

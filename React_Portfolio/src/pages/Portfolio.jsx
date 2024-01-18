@@ -1,4 +1,4 @@
-import Project from "./Project";
+import Project from "../components/Project";
 import Path1 from "../assets/images/song-finder-custom-image.png"
 import Path2 from "../assets/images/Present-List-Custom-Image.png"
 import Path3 from "../assets/images/project-image-placeholder.png"
@@ -60,7 +60,7 @@ function moreProjects() {
   location.href = "https://github.com/smindre1/pacey";
 };
 
-function ProjectDisplay() {
+function Portfolio() {
   return (
     <div className="container">
       <h2 className="title">
@@ -80,4 +80,4 @@ function ProjectDisplay() {
   );
 }
 
-export default ProjectDisplay;
+export default Portfolio;
