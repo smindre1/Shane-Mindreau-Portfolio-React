@@ -1,9 +1,13 @@
+import Form from '../components/ContactForm'
+
 function Contacts() {
   return (
     <div className="container contacts">
       <h2 id="Contact-Me-Path" className="title">
         Contact Me
       </h2>
+      <Form></Form>
+      <br></br>
       <nav id="contact-me-nav">
         <a href="tel:646-526-4839" className="contacts-spacing">
           646•526•4839
