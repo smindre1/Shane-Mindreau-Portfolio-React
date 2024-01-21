@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import Popup from '../components/Popup';
 
 const ContactForm = () => {
@@ -8,6 +8,12 @@ const ContactForm = () => {
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+
+  const subjectId = useRef(null);
+  const nameId = useRef(null);
+  const emailId = useRef(null);
+  const numberId = useRef(null);
+  const messageId = useRef(null);
 
   const sendEmail = async () => {
     const bodyMessage = `Full Name: ${name}<br>Email: ${email}<br>Phone Number: ${number}<br>Message:<br>${message}`;
@@ -25,10 +31,16 @@ const ContactForm = () => {
   );
   }
 
+  const checkInputs = () => {
+    const items = [subject, name, email, number, message];
+    
+
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     sendEmail();
-    // setSuccess(true);
+    setSuccess(true);
 
     try {
       // Reset form after successful submission
@@ -44,23 +56,35 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contactForm" onSubmit={handleSubmit}>
+    <form className="contactForm" autoComplete="off" onSubmit={handleSubmit}>
       {/* <h2>Contact</h2> */}
       <div className="flexRow formDiv">
-        <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
-        <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
+          <p className="errorTxt">Full Name cannot be blank</p>
+        </div>
+        <div className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <p className="errorTxt">Email cannot be blank</p>
+        </div>
       </div>
       <div className="flexRow formDiv">
-        <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} />
-        <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => setNumber(e.target.value)} />
+        <div className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} />
+          <p className="errorTxt">Subject cannot be blank</p>
+        </div>
+        <div className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => setNumber(e.target.value)} />
+          <p className="errorTxt">Phone Number cannot be blank</p>
+        </div>
       </div>
       <div className="flexColumn">
         <textarea className="formFields" type="text" placeholder="Message" cols="30" rows="10" autoComplete="off" value={message} onChange={(e) => setMessage(e.target.value)} />
-        <button className="formBtn" type="submit" onClick={() => setSuccess(true)}>Submit</button>
+        <p className="errorTxt">Message cannot be blank</p>
+        <button className="formBtn" type="submit">Submit</button>
       </div>
       
       <Popup trigger={success} setTrigger={setSuccess}>
-        <h3>Thank You For Your Message!</h3>
       </Popup>
     </form>
   );

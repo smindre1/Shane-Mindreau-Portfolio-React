@@ -1,12 +1,10 @@
 :root {
-  --licor: #220901;
   --salmon: #fa775b;
-  --poly-blue: #054a91;
-  --red: #941b0c;
   --brown: #621708;
   --green: #57b288;
   --dark-blue: #002347;
 
+  --red: #941b0c;
   --gold: #fcc127;
   --lightgold: #fbd45d;
   --darkgold: #b88c07;
@@ -22,19 +20,6 @@
   margin: 0;
 }
 
-/* body {
-    background-color: var(--poly-blue);
-    background-image: url(./assets/images/Portfolio_Background_Image.png),
-      linear-gradient(to right, var(--poly-blue), var(--dark-blue), var(--dark-blue), var(--dark-blue), var(--poly-blue)); */
-/* The first argument is for the background image, the second is for the color gradient */
-/* background-repeat: repeat-x, repeat;
-    background-size: 60%, contain;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-family: sans-serif;
-  } */
-
 body {
   background-color: var(--black);
   background-image: url(./assets/images/grunge-texture-1920x1080.jpg);
@@ -45,7 +30,6 @@ body {
 }
 
 header {
-  /* background-color: var(--salmon); */
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -62,6 +46,7 @@ p {
 
 .mainPage {
   display: inline-block;
+  width: 100%;
 }
 
 .background {
@@ -83,12 +68,19 @@ h1 {
   padding-right: 5vw;
   border-top-right-radius: 10px 20%;
   border-bottom-right-radius: 10px 20%;
-  /* background-color: var(--dark-blue); */
   color: var(--gold);
-  /* text-shadow: 2px 2px 5px var(--ash); */
-  /* position: absolute;
-    bottom: 0;
-    left: 0; */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 a:visited {
+  color: var(--gold);
+}
+
+.logo {
+  color: var(--gold);
 }
 
 .menu {
@@ -101,11 +93,6 @@ h1 {
 header nav a {
   margin: 0 10px 0 0;
 }
-
-/* section {
-    color: var(--salmon);
-    display: flex;
-  } */
 
 h2 {
   color: var(--gold);
@@ -159,13 +146,6 @@ aside {
 
 .menuBarText:hover {
   color: var(--darkgold);
-}
-
-div {
-  display: flex;
-  /* flex-wrap: wrap; */
-  margin: 0;
-  width: 100%;
 }
 
 .title {
@@ -385,7 +365,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--ash);
+  /* background-color: var(--ash); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,13 +376,26 @@ button:hover {
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background-color: var(--whiteash);
+  color: var(--whiteash);
+  background-color: var(--black);
+  border: solid var(--gold) 3px;
+  border-radius: 10px;
 }
 
 .closeBtn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  color: var(--black);
+  background-color: var(--gold);
+  border: solid var(--darkgold) 2px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 15px 5px 15px;
+  margin: 20px auto 10px auto;
+}
+
+.closeBtn:hover {
+  background-color: var(--darkgold);
+  border: solid var(--gold) 2px;
 }
 
 /* Contacts */
@@ -418,16 +411,23 @@ button:hover {
 }
 
 .formInput {
-  width: 48.5%;
+
   margin: 0 0 20px 0;
 }
 
 .formFields {
-  color: var(--ash);
+  color: var(--gold);
   background-color: var(--black);
   border: solid var(--darkgold) 2px;
   border-radius: 3px;
   opacity: 80%;
+  font-size: 16px;
+  padding: 18px;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--ash);
 }
 
 input:focus, textarea:focus {
@@ -447,7 +447,25 @@ input:focus, textarea:focus {
   background-color: var(--gold);
   border: solid var(--darkgold) 2px;
   border-radius: 3px;
-  box-shadow: 0 0 5px var(--lightgold);
-  width: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  
+  /* width: 80px; */
+  padding: 10px 30px 10px 30px;
   margin: 20px auto 10px auto;
+}
+
+.formBtn:hover {
+  box-shadow: 0 0 5px var(--lightgold);
+}
+
+.formSection {
+  width: 48.5%;
+}
+
+.errorTxt {
+  font-size: 14px;
+  color: var(--red);
+  text-align: left;
+  margin: -5px 0 10px;
 }
