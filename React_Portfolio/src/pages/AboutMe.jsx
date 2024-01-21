@@ -2,7 +2,7 @@ import Face from '../assets/images/face-placeholder.jpg'
 
 function AboutMe() {
     return (
-    <div className="container">
+    <div className="flexRow">
         <h2 className="title"><a id="About-Me-Path">About Me</a></h2>
         <article id="aboutMeArticle">
           <figure className="div">

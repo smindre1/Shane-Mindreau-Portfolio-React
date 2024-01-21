@@ -62,7 +62,7 @@ function moreProjects() {
 
 function Portfolio() {
   return (
-    <div className="container">
+    <div className="flexRow">
       <h2 className="title">
         <a id="My-Work-Path">My Work</a>
       </h2>

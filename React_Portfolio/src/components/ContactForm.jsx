@@ -9,11 +9,6 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    success ? setTimeout(setSuccess(false), 5000) : null;
-    console.log("running effect")
-  }, [success]);
-
   const sendEmail = async () => {
     const bodyMessage = `Full Name: ${name}<br>Email: ${email}<br>Phone Number: ${number}<br>Message:<br>${message}`;
     
@@ -33,9 +28,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     sendEmail();
-
-    setSuccess(true);
-    // setTimeout(setSuccess(false), 5000);
+    // setSuccess(true);
 
     try {
       // Reset form after successful submission
@@ -51,14 +44,21 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="contactForm" onSubmit={handleSubmit}>
       {/* <h2>Contact</h2> */}
-      <input type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
-      <input type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} />
-      <input type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => setNumber(e.target.value)} />
-      <textarea type="text" placeholder="Message" cols="30" rows="10" autoComplete="off" value={message} onChange={(e) => setMessage(e.target.value)} />
-      <button type="submit" onClick={() => setSuccess(true)}>Submit</button>
+      <div className="flexRow formDiv">
+        <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
+        <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
+      </div>
+      <div className="flexRow formDiv">
+        <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} />
+        <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => setNumber(e.target.value)} />
+      </div>
+      <div className="flexColumn">
+        <textarea className="formFields" type="text" placeholder="Message" cols="30" rows="10" autoComplete="off" value={message} onChange={(e) => setMessage(e.target.value)} />
+        <button className="formBtn" type="submit" onClick={() => setSuccess(true)}>Submit</button>
+      </div>
+      
       <Popup trigger={success} setTrigger={setSuccess}>
         <h3>Thank You For Your Message!</h3>
       </Popup>
