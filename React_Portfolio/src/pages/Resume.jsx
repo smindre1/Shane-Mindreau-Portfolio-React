@@ -1,7 +1,7 @@
 function Resume() {
     return (
-    <div>
-        <h2 className="title">Work In Progress</h2>
+    <div className="flexColumn about-page">
+        <h2 className="name">Work In Progress</h2>
         <p>Resume coming soon!</p>
     </div>
     );

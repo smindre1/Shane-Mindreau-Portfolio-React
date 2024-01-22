@@ -28,7 +28,11 @@ const ContactForm = () => {
       Subject : `Portfolio: ${subject}`,
       Body : bodyMessage
   }).then(
-    message => alert("Message Sent")
+    message => {
+      if(message != "OK") {
+        alert("Something Went Wrong");
+      }
+    }
   );
   }
 
@@ -76,21 +80,21 @@ const ContactForm = () => {
       {/* <h2>Contact</h2> */}
       <div ref={divId} className="flexRow formDiv">
         <div ref={nameId} className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
+          <input className="formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Full Name cannot be blank</p>
         </div>
         <div ref={emailId} className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => {setEmail(e.target.value); handleChange(e)}} />
+          <input className="formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => {setEmail(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Email cannot be blank</p>
         </div>
       </div>
       <div className="flexRow formDiv">
         <div ref={subjectId} className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
+          <input className="formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Subject cannot be blank</p>
         </div>
         <div ref={numberId} className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handleChange(e)}} />
+          <input className="formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Phone Number cannot be blank</p>
         </div>
       </div>

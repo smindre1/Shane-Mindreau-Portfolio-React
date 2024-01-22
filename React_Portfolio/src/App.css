@@ -94,15 +94,6 @@ header nav a {
   margin: 0 10px 0 0;
 }
 
-h2 {
-  color: var(--gold);
-  font-size: 2.5vw;
-  /* padding-left: 15%; */
-  padding-right: 15px;
-  text-align: right;
-  border-right: thick solid var(--darkgray);
-}
-
 h3 {
   font-size: 100%;
 }
@@ -154,6 +145,11 @@ aside {
   justify-content: right;
   font-weight: normal;
   /* align-items: center; */
+  color: var(--gold);
+  font-size: 2.5vw;
+  padding-right: 15px;
+  text-align: right;
+  border-right: thick solid var(--darkgray);
 }
 
 .details {
@@ -250,20 +246,9 @@ figure:hover img {
 }
 
 #profile {
+  display: flex;
   width: 12vw;
   border-radius: 10px;
-  display: flex;
-  margin: 0 2vw 0 2vw;
-}
-
-#aboutMeArticle {
-  display: flex;
-}
-
-.text {
-  flex-direction: column;
-  font-size: 1.25vw;
-  color: var(--salmon);
 }
 
 #projectLink {
@@ -327,9 +312,6 @@ button:hover {
     padding: 0 0 5% 0;
     margin: 0 0 10px 0;
   }
-  #aboutMeArticle {
-    justify-content: center;
-  }
   article,
   aside {
     margin: 0 0 4vw 0;
@@ -352,9 +334,6 @@ button:hover {
   }
   #Contact-Me-Path {
     padding: 0 0 2% 0;
-  }
-  .text {
-    width: auto;
   }
 }
 
@@ -410,11 +389,6 @@ button:hover {
   text-align: center;
 }
 
-.formInput {
-
-  margin: 0 0 20px 0;
-}
-
 .formFields {
   color: var(--gold);
   background-color: var(--black);
@@ -424,6 +398,7 @@ button:hover {
   font-size: 16px;
   padding: 18px;
   resize: none;
+  margin: 0 0 20px 0;
 }
 
 input::placeholder, textarea::placeholder {
@@ -467,7 +442,7 @@ input:focus, textarea:focus {
   font-size: 14px;
   color: var(--red);
   text-align: left;
-  margin: -5px 0 10px;
+  margin: -10px 0 10px;
 }
 
 .hide {
@@ -476,4 +451,20 @@ input:focus, textarea:focus {
 
 .error {
   border: solid var(--red) 2px;
+}
+
+/* About Me Page */
+.about-page {
+  justify-content: center;
+}
+
+.name{
+  font-weight: normal;
+  color: var(--gold);
+  font-size: 2.5vw;
+  margin: 0 0 20px 0;
+}
+
+.bio {
+  flex-basis: 25%;
 }
