@@ -14,6 +14,7 @@ const ContactForm = () => {
   const emailId = useRef(null);
   const numberId = useRef(null);
   const messageId = useRef(null);
+  const divId = useRef(null);
 
   const sendEmail = async () => {
     const bodyMessage = `Full Name: ${name}<br>Email: ${email}<br>Phone Number: ${number}<br>Message:<br>${message}`;
@@ -31,56 +32,73 @@ const ContactForm = () => {
   );
   }
 
-  const checkInputs = () => {
-    const items = [subject, name, email, number, message];
-    
+  const checkForm = () => {
+    //Creates an array of each form field
+    const items = [{value: subject, id: subjectId}, {value: name, id: nameId}, {value: email, id: emailId}, {value: number, id: numberId}, {value: message, id: messageId}];
+    //Checks that each field has content, otherwise changes to error state
+    items.forEach((item) => {
+      if(item.value == "") {
+        item.id.current.firstChild.classList.add("error");
+        item.id.current.lastChild.classList.remove("hide");
+      }
+    })
+  }
 
+  //Removes a form field's error state when the user adds content
+  const handleChange = (event) => {
+    //*Future Note: These are dependent on <input> and <p> respectively being the first and last child element's in their field <div>
+    event.target.classList.contains("error") ? event.target.classList.remove("error"): null;
+    const hidden = event.target.parentElement.lastChild.classList.contains("hide")
+    !hidden ? event.target.parentElement.lastChild.classList.add("hide") : null;
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    sendEmail();
-    setSuccess(true);
-
-    try {
+    checkForm();
+    //An empty field will prevent the form from submitting
+    if(subject == "" || name == "" || email == "" || number == "" || message == "") {
+      setSuccess(false);
+    } else {
+      sendEmail();
       // Reset form after successful submission
       setName("");
       setEmail("");
       setSubject("");
       setNumber("");
       setMessage("");
-
-    } catch (error) {
-      console.error("Error adding post:", error);
+      //State change initiates popup
+      setSuccess(true);
     }
   };
 
   return (
     <form className="contactForm" autoComplete="off" onSubmit={handleSubmit}>
       {/* <h2>Contact</h2> */}
-      <div className="flexRow formDiv">
-        <div className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
-          <p className="errorTxt">Full Name cannot be blank</p>
+      <div ref={divId} className="flexRow formDiv">
+        <div ref={nameId} className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
+          <p className="errorTxt hide">Full Name cannot be blank</p>
         </div>
-        <div className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <p className="errorTxt">Email cannot be blank</p>
+        <div ref={emailId} className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => {setEmail(e.target.value); handleChange(e)}} />
+          <p className="errorTxt hide">Email cannot be blank</p>
         </div>
       </div>
       <div className="flexRow formDiv">
-        <div className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => setSubject(e.target.value)} />
-          <p className="errorTxt">Subject cannot be blank</p>
+        <div ref={subjectId} className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
+          <p className="errorTxt hide">Subject cannot be blank</p>
         </div>
-        <div className="flexColumn formSection">
-          <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => setNumber(e.target.value)} />
-          <p className="errorTxt">Phone Number cannot be blank</p>
+        <div ref={numberId} className="flexColumn formSection">
+          <input className="formInput formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handleChange(e)}} />
+          <p className="errorTxt hide">Phone Number cannot be blank</p>
         </div>
       </div>
       <div className="flexColumn">
-        <textarea className="formFields" type="text" placeholder="Message" cols="30" rows="10" autoComplete="off" value={message} onChange={(e) => setMessage(e.target.value)} />
-        <p className="errorTxt">Message cannot be blank</p>
+        <div ref={messageId} className="flexColumn">
+          <textarea className="formFields" type="text" placeholder="Message" cols="30" rows="10" autoComplete="off" value={message} onChange={(e) => {setMessage(e.target.value); handleChange(e)}} />
+          <p className="errorTxt hide">Message cannot be blank</p>
+        </div>
         <button className="formBtn" type="submit">Submit</button>
       </div>
       

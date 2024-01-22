@@ -469,3 +469,11 @@ input:focus, textarea:focus {
   text-align: left;
   margin: -5px 0 10px;
 }
+
+.hide {
+  display: none;
+}
+
+.error {
+  border: solid var(--red) 2px;
+}
