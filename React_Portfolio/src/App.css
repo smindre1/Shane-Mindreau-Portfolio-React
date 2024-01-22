@@ -133,6 +133,8 @@ aside {
   color: var(--gold);
   font-size: 18px;
   font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 5px;
 }
 
 .menuBarText:hover {
@@ -467,4 +469,14 @@ input:focus, textarea:focus {
 
 .bio {
   flex-basis: 25%;
+}
+
+/* Header */
+.highlight {
+  background-color: var(--darkgold);
+  color: var(--black);
+}
+
+.highlight:hover {
+  color: var(--darkgray);
 }
