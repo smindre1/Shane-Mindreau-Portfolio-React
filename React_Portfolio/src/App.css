@@ -1,8 +1,6 @@
 :root {
-  --salmon: #fa775b;
-  --brown: #621708;
   --green: #57b288;
-  --dark-blue: #002347;
+  --dark-blue: #020A3D;
 
   --red: #941b0c;
   --gold: #fcc127;
@@ -27,17 +25,6 @@ body {
   height: 100%;
   position: relative;
   font-family: sans-serif;
-}
-
-header {
-  display: flex;
-  align-items: baseline;
-  width: 100%;
-  margin: 0 0 5vw 0;
-  padding: 2% 0 1% 0;
-  /* border-bottom: solid 10px;
-    border-color: var(--darkgray); */
-  /* box-shadow: 0 0 0 8px var(--darkgray); */
 }
 
 p {
@@ -202,7 +189,7 @@ aside {
 
 img {
   width: 24vw;
-  border: solid var(--darkgray) 5px;
+  border: solid var(--dark-blue) 5px;
 }
 
 .greyOverlay {
@@ -223,8 +210,8 @@ figure:hover img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--salmon);
-  color: var(--brown);
+  background-color: var(--dark-blue);
+  color: var(--gold);
 }
 
 .mainCaption {
@@ -266,11 +253,12 @@ button:hover {
 .portfolioBtn {
   width: 100%;
   padding: 15px 0 15px 0;
-  background-color: var(--salmon);
-  color: var(--brown);
+  background-color: var(--darkgold);
+  color: var(--dark-blue);
   font-size: 18px;
   font-weight: 900;
   opacity: 0.75;
+  border: solid 2px var(--dark-blue);
 }
 
 @media only screen and (max-width: 853px) {
@@ -310,7 +298,7 @@ button:hover {
   }
   h2 {
     border-right: 0;
-    border-bottom: thick solid var(--salmon);
+    border-bottom: thick solid var(--dark-blue);
     padding: 0 0 5% 0;
     margin: 0 0 10px 0;
   }
@@ -380,6 +368,17 @@ button:hover {
 }
 
 /* ------------------- Header ------------------- */
+header {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin: 0 0 4vw 0;
+  padding: 2% 0 1% 0;
+  /* border-bottom: solid 10px;
+    border-color: var(--darkgray); */
+  /* box-shadow: 0 0 0 8px var(--darkgray); */
+}
+
 .highlight {
   background-color: var(--darkgold);
   color: var(--black);
@@ -468,7 +467,7 @@ input:focus, textarea:focus {
   justify-content: center;
 }
 
-.name{
+.subtitle{
   font-weight: normal;
   color: var(--gold);
   font-size: 2.5vw;
@@ -479,7 +478,7 @@ input:focus, textarea:focus {
   flex-basis: 33%;
 }
 
-.subtitle {
+.prgTitle {
   color: var(--gold);
   font-size: 24px;
   margin: 24px 0 12px 0;
@@ -491,4 +490,21 @@ input:focus, textarea:focus {
 
 .bulletPoint {
   font-weight: bold;
+}
+
+/* .testingOne {
+  background-color: #001D3D;
+  background-color: var(--dark-blue);
+  width: 400px;
+  height: 40px;
+  margin: 20px;
+} */
+
+.testTwo {
+
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto 40px auto;
+  opacity: 90%;
+  border: solid var(--darkgold) 10px;
 }

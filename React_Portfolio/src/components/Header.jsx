@@ -17,7 +17,6 @@ function Header() {
 
     useEffect(() => {
         pageSelection();
-        console.log("run");
     }, [about, portfolio, contact, resume])
     
     // {about ? "highlight menuBarText" : "menuBarText"}
