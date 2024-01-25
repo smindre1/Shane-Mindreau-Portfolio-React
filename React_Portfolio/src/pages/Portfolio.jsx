@@ -77,6 +77,9 @@ const Portfolio = () => {
         <figure className="figure greyOverlay">
           <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
         </figure>
+        <figure className="figure greyOverlay hide">
+          <img className="mainImg opacityFilter" src={projects[display + 1].image} alt={projects[display].alt} />
+        </figure>
         
         <div className="flexColumn">
           <h3 className="subtitle">{projects[display].projectTitle}</h3>

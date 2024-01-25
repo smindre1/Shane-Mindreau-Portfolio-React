@@ -7,9 +7,9 @@ function AboutMe() {
         <h2 className="subtitle">Shane Mindreau</h2>
         <div>
           <h3 className="prgTitle">Full-Stack Web Developer</h3>
-          <p className="bodyText">Welcome! I'm Shane, a full-stack web developer with a passion for building creative and reactive digital projects. I am specialized in using React.js to make dynamic front-end designs as well as MongoDB/SQL databases for robust data management.</p>
+          <p className="intro">Welcome! I'm Shane, a full-stack web developer with a passion for building creative and reactive digital projects. I am specialized in using React.js to make dynamic front-end designs as well as MongoDB/SQL databases for robust data management.</p>
           <h3 className="prgTitle">I'm Also Proficient In...</h3>
-          <li className="bodyText">- Node.js</li>
+          <p className="bodyText">- Node.js</p>
           <p className="bodyText">- MERN stack</p>
           <p className="bodyText">- RESTful APIs</p>
           <p className="bodyText">- GraphQL APIs</p>

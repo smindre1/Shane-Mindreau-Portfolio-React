@@ -22,7 +22,7 @@ function Header() {
     // {about ? "highlight menuBarText" : "menuBarText"}
     return (
     <header>
-    <h1 className="logo"><a href="/">SM</a></h1>
+    <h1><a className="logo" href="/">SM</a></h1>
     <nav className="menu">
         <a href="/" className={about ? "highlight menuBarText" : "menuBarText"}>About Me</a>
         <a href="/Portfolio" className={portfolio ? "highlight menuBarText" : "menuBarText"}>Portfolio</a>
