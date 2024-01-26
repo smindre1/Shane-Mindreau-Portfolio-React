@@ -2,10 +2,14 @@ import Project from "../components/Project";
 import Path1 from "../assets/images/song-finder-custom-image.png"
 import Path2 from "../assets/images/Present-List-Custom-Image.png"
 import Path3 from "../assets/images/project-image-placeholder.png"
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Portfolio = () => {
   const [display, setDisplay] = useState(0);
+  // const [text, setText] = useState(0);
+  const oldMain = useRef(null);
+  const newMain = useRef(null);
+  const textBody = useRef(null);
 
   const projects = [
     {
@@ -65,23 +69,92 @@ const Portfolio = () => {
     },
   ];
   const range = projects.length - 1;
-  function moreProjects() {
-    location.href = "https://github.com/smindre1/pacey";
-  };
+  
+  const displayAnimation = `
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-123px);
+    }
+  }
+`;
+
+  const textAnimation = `
+  @keyframes textAppear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  `;
+
+
+  useEffect(() => {
+    
+    oldMain.current.classList.add("vanish");
+    newMain.current.classList.remove("hide");
+    
+    textBody.current.style.animation = 'textAppear 2s';
+    textBody.current.style.animationFillMode = 'forwards';
+    newMain.current.style.animation = 'fadeIn 2s';
+    newMain.current.style.animationFillMode = 'forwards';
+    setTimeout(() => {oldMain.current.classList.remove("vanish");
+    newMain.current.classList.add("hide"); textBody.current.style.animation = '';}, 2000)
+    
+  }, [display]);
+
+  // const rightEnterAnimation = () => {
+  //   // const targetCord = oldMain.current.getBoundingClientRect();
+  //   // console.log("target", targetCord);
+    
+
+  //   // oldMain.current.classList.add("hide");
+  //   oldMain.current.classList.add("vanish");
+  //   // textBody.current.classList.add("vanish");
+
+  //   newMain.current.classList.remove("hide");
+  //   // const actualCord = newMain.current.getBoundingClientRect();
+  //   // console.log("actual", actualCord);
+  //   newMain.current.classList.add("fade-in");
+  //   range != text ? setText(text + 1) : setText(0);
+  //   textBody.current.classList.add("textRotate");
+
+  //   range != display ? setDisplay(display + 1) : setDisplay(0);
+  //   oldMain.current.classList.remove("vanish");
+  //   setTimeout(() => {
+  //     newMain.current.classList.add("hide");
+  //     textBody.current.classList.remove("textRotate");
+  //     // setTimeout(() => {
+  //     //   range != display ? setDisplay(display + 1) : setDisplay(0);
+  //     //   oldMain.current.classList.remove("vanish");
+  //     // }, 500)
+      
+  //     }, 4000)
+    
+
+  // }
 
   return (
     <div className="flexColumn">
       {/* <h2 className="subtitle">My Work</h2> */}
       <div className="flexRow about-page">
         
-        <figure className="figure greyOverlay">
+        <figure ref={oldMain} className="figure greyOverlay">
           <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
         </figure>
-        <figure className="figure greyOverlay hide">
-          <img className="mainImg opacityFilter" src={projects[display + 1].image} alt={projects[display].alt} />
+        <figure ref={newMain} className="figure greyOverlay hide nextImage">
+          <style>{displayAnimation}</style>
+          <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
         </figure>
         
-        <div className="flexColumn">
+        <div ref={textBody} className="flexColumn">
+          <style>{textAnimation}</style>
           <h3 className="subtitle">{projects[display].projectTitle}</h3>
           <button href={projects[display].href}>Deployed Site</button>
           <button href={projects[display].href}>Github Repository</button>
@@ -93,20 +166,6 @@ const Portfolio = () => {
         <button onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0)}}> {'>'} </button>
       </div>
     </div>
-
-    // <div className="flexRow">
-    //   <h2 className="subtitle">My Work</h2>
-    //   <div className="project-images">
-    //     {projects.map((proj) => (
-    //       <Project key={proj.id} proj={proj}
-          
-    //       href={proj.href} image={proj.image} alt={proj.alt} projectTitle={proj.projectTitle} desc={proj.desc} mainImg={proj.mainImg} caption={proj.caption}/>
-    //     ))}
-    //     <button className="portfolioBtn" onClick={moreProjects}>
-    //       More Of My Work Here!
-    //     </button>
-    //   </div>
-    // </div>
     // <div className="testTwo"></div>
   );
 }

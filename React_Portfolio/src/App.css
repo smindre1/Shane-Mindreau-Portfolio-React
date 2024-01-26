@@ -177,7 +177,7 @@ aside {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 0 0 1vw 0;
+  margin: 0 20px 1vw 0;
 }
 
 .leftFigure {
@@ -198,17 +198,17 @@ img {
 }
 
 .greyOverlay {
-  background-color: var(--dark-blue);
+  background-color: var(--black);
 }
 
 .opacityFilter {
-  opacity: 0.75;
+  opacity: 1;
 }
 
-figure:hover img {
+/* figure:hover img {
   opacity: 1;
   border: solid var(--gold) 5px;
-}
+} */
 
 .caption {
   position: absolute;
@@ -506,13 +506,14 @@ input:focus, textarea:focus {
   font-weight: bold;
 }
 
-/* .testingOne {
+.testingOne {
   background-color: #001D3D;
   background-color: var(--dark-blue);
-  width: 400px;
-  height: 40px;
+  width: 50vw;
+  height: 50vh;
   margin: 20px;
-} */
+  border: solid var(--gold);
+}
 
 
 /* A border test located on portfolio */
@@ -530,6 +531,49 @@ input:focus, textarea:focus {
 
 /* .hide in contacts section */
 
-.fadeTransition {
-
+.vanish {
+  opacity: 0;
 }
+
+.nextImage {
+  position: absolute;
+}
+
+/* .fade-in {
+  animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-20%);
+  }
+} */
+
+/* .textRotate {
+   animation: textVanish 4s; 
+   animation: textAppear 4s;
+} */
+
+/* @keyframes textVanish {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes textAppear {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+  }
+} */
