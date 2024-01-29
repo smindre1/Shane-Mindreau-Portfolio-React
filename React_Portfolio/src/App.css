@@ -24,10 +24,11 @@
 body {
   background-color: var(--black);
   background-image: url(./assets/images/grunge-texture-1920x1080.jpg);
+  background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 p {
@@ -443,6 +444,7 @@ input:focus, textarea:focus {
   font-weight: 600;
   padding: 10px 30px 10px 30px;
   margin: 20px auto 10px auto;
+  font-weight: 900;
 }
 
 .formBtn:hover {
@@ -529,8 +531,6 @@ input:focus, textarea:focus {
 
 /* ----------------- Portfolio ------------------ */
 
-/* .hide in contacts section */
-
 .vanish {
   opacity: 0;
 }
@@ -554,26 +554,79 @@ input:focus, textarea:focus {
   }
 } */
 
-/* .textRotate {
-   animation: textVanish 4s; 
-   animation: textAppear 4s;
-} */
-
-/* @keyframes textVanish {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.icon {
+  border: none;
+  width: 100px;
+  margin: 0 20px;
 }
 
-@keyframes textAppear {
-  from {
-    opacity: 0;
+.iconFadeRight {
+  width: 80px;
+  mask-image: linear-gradient(to left, transparent 30%, white 100%);
+  /* This is for older browsers */
+  -webkit-mask-image: linear-gradient(to left, transparent 30%, white 100%);
+  z-index: -1;
+  border: none;
+}
 
-  }
-  to {
-    opacity: 1;
-  }
+.iconFadeLeft {
+  width: 80px;
+  mask-image: linear-gradient(to right, transparent 30%, white 100%);
+  /* This is for older browsers */
+  -webkit-mask-image: linear-gradient(to right, transparent 30%, white 100%);
+  z-index: -1;
+  border: none;
+}
+
+.descDiv {
+  /* width: 600px; */
+  flex-basis: 30%;
+}
+
+.iconDiv {
+  display: flex;
+  justify-content: right;
+  margin: 0 14% 40px 0;
+}
+
+.arrow {
+  width: 40px;
+  border: none;
+}
+
+.rightArrowBtn {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 0 -20px;
+}
+
+.leftArrowBtn {
+  border: none;
+  background-color: transparent;
+  margin: 0 -20px 0 0;
+  transform: rotate(180deg);
+}
+
+.lineBreak {
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 20px;
+}
+
+/* .btnDisplay {
+  justify-content: center;
+
 } */
+
+.portfolioBtns {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: var(--black);
+  color: var(--darkgold);
+  border: solid var(--gold) 3px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+}
