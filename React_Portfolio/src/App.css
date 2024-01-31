@@ -107,18 +107,17 @@ aside {
 
 .contacts-spacing {
   display: flex;
-  margin: 0 3vw 0 0;
-  color: var(--green);
+  margin: 0 3vw;
+  color: var(--ash);
   font-size: 1.25vw;
 }
 
-#contact-me-nav {
+.contact-me-nav {
   display: flex;
   /* padding: 1% 20vw 1% 5vw; */
-  flex-basis: 50%;
-  margin: 100px 2% 100px 2%;
-  justify-content: space-evenly;
-  align-items: center;
+  /* flex-basis: 50%; */
+  margin: 80px 2% 100px 2%;
+  /* justify-content: space-evenly; */
 }
 
 .menuBarText {
@@ -319,7 +318,7 @@ button:hover {
     width: 50%;
   }
 
-  #contact-me-nav {
+  .contact-me-nav {
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
@@ -437,7 +436,7 @@ input:focus, textarea:focus {
 
 .formBtn {
   color: var(--black);
-  background-color: var(--gold);
+  background-color: var(--darkgold);
   border: solid var(--darkgold) 2px;
   border-radius: 3px;
   font-size: 16px;
@@ -448,7 +447,9 @@ input:focus, textarea:focus {
 }
 
 .formBtn:hover {
-  box-shadow: 0 0 5px var(--lightgold);
+  box-shadow: 0 0 10px var(--lightgold);
+  border: solid var(--lightgold) 2px;
+  background-color: var(--gold);
 }
 
 .formSection {
@@ -470,6 +471,30 @@ input:focus, textarea:focus {
   border: solid var(--red) 2px;
 }
 
+.contactIcon {
+  width: 60px;
+  padding: 10px;
+  background-color: var(--darkgold);
+  border: none;
+  border-radius: 15px;
+}
+
+.shrink {
+  padding: 14px;
+}
+
+/* Because the svg dimensions differ, these two classes need to be adjusted concurently */
+.contactIcon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 0px 15px var(--lightgold);
+  padding: 8px;
+  border: solid 2px var(--lightgold);
+  background-color: var(--gold);
+}
+.shrink:hover {
+  padding: 12px;
+}
+
 /* --------------- About Me Page ---------------- */
 .about-page {
   justify-content: center;
@@ -480,12 +505,20 @@ input:focus, textarea:focus {
   font-weight: normal;
   color: var(--gold);
   font-size: 48px;
-  border-bottom: solid var(--gold);
+  /* border-bottom: solid var(--gold); */
   /* margin: 0 0 20px 0; */
 }
 
 .bio {
   flex-basis: 45%;
+}
+
+.role {
+  color: var(--black);
+  background: linear-gradient(45deg, var(--gold), transparent);
+  font-size: 24px;
+  padding: 2px 0 2px 5px;
+  margin: 0 0 24px 0;
 }
 
 .prgTitle {
@@ -502,6 +535,12 @@ input:focus, textarea:focus {
 .bodyText {
   color: var(--whiteash);
   font-size: 18px;
+  /* border-left: solid var(--darkgold) 3px;
+  padding: 0 0 0 10px; */
+}
+
+.profileTag {
+  color: var(--gold);
 }
 
 .bulletPoint {
@@ -586,13 +625,23 @@ input:focus, textarea:focus {
 .iconDiv {
   display: flex;
   justify-content: right;
-  margin: 0 14% 40px 0;
+  margin: 0 13% 40px 0;
 }
 
 .arrow {
   width: 40px;
   border: none;
 }
+
+.arrow:hover{
+  cursor: pointer;
+  /* width: 50px;  */
+  /* margin: 0 0px 0 10px; */
+}
+
+/* .rightArrowBtn:has(.arrow:hover) {
+  background-color: #57b288;
+} */
 
 .rightArrowBtn {
   border: none;

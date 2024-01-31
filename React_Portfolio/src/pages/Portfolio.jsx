@@ -6,6 +6,7 @@ import PawIcon from "../assets/images/icons/Paw_Icon.svg"
 import WeatherIcon from "../assets/images/icons/Weather_Icon.svg"
 import QuizIcon from "../assets/images/icons/Quiz_Icon.svg"
 import Arrow from "../assets/images/Arrow.svg"
+// import Github from "../assets/images/icons/Github_Icon.svg"
 
 import { useState, useRef, useEffect } from "react";
 
