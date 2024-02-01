@@ -80,11 +80,11 @@ const Portfolio = () => {
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateX(-20%);
+      transform: translateX(10%);
     }
     to {
       opacity: 1;
-      transform: translateX(-30%);
+      transform: translateX(0%);
     }
   }
 `;
@@ -120,24 +120,36 @@ const Portfolio = () => {
   return (
     <div className="flexColumn">
       {/* <h2 className="subtitle">My Work</h2> */}
-      <div className="flexRow about-page">
+      <div className="portfolioPage">
+        <div className="flexRow figureDiv">
+          <figure ref={oldMain} className="figure">
+            <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
+          </figure>
+          <figure ref={newMain} className="figure hide nextImage">
+            <style>{displayAnimation}</style>
+            <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
+          </figure>
+        </div>
         
-        <figure ref={oldMain} className="figure greyOverlay">
-          <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
-        </figure>
-        <figure ref={newMain} className="figure greyOverlay hide nextImage">
-          <style>{displayAnimation}</style>
-          <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
-        </figure>
         
-        <div ref={textBody} className="descDiv flexColumn">
-          <style>{textAnimation}</style>
-          <h3 className="subtitle lineBreak">{projects[display].projectTitle}</h3>
-          <p className="lineBreak description">{projects[display].desc}</p>
-          <p className="lineBreak description">{projects[display].purpose}</p>
-          <div className="flexRow btnDisplay">
-            <button className="portfolioBtns" onClick={() => {window.open(projects[display].href, "_blank")}}>Deployed Site</button>
-            <button className="portfolioBtns" onClick={() => {window.open(projects[display].repo, "_blank")}}>Github Repository</button>
+        <div className="descDiv">
+          <div ref={textBody} className="flexColumn">
+            <style>{textAnimation}</style>
+            <h3 className="subtitle lineBreak">{projects[display].projectTitle}</h3>
+            <p className="lineBreak description">{projects[display].desc}</p>
+            <p className="lineBreak description">{projects[display].purpose}</p>
+            <div className="flexRow btnDisplay">
+              <button className="portfolioBtns" onClick={() => {window.open(projects[display].href, "_blank")}}>Deployed Site</button>
+              <button className="portfolioBtns" onClick={() => {window.open(projects[display].repo, "_blank")}}>Github Repository</button>
+            </div>
+          </div>
+          {/* This secondIconDiv is for when the layout of the site changes according to a medium window display size */}
+          <div className="flexRow secondIconDiv">
+            <button className="leftArrowBtn" onClick={() => {0 != display ? setDisplay(display - 1) : setDisplay(range)}}> <img className="arrow" src={Arrow}></img> </button>
+            <img className="iconFadeLeft" src={0 != display ? projects[display - 1].icon : projects[range].icon}></img>
+            <img className="icon" src={projects[display].icon} ></img>
+            <img className="iconFadeRight" src={range != display ? projects[display + 1].icon : projects[0].icon}></img>
+            <button className="rightArrowBtn" onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0)}}> <img className="arrow" src={Arrow}></img> </button>
           </div>
         </div>
       </div>

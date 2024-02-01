@@ -21,7 +21,7 @@ function AboutMe() {
       </article>
       <div className="flexColumn">
         <figure>
-          <img id="profile" src={Face} alt="Profile Image" /> 
+          <img className="profile" src={Face} alt="Profile Image" /> 
         </figure>
         <p className="bodyText profileTag">shane.mindreau@gmail.com</p>
         <p className="bodyText profileTag">(646) 526-4839</p>

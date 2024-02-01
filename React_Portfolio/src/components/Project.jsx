@@ -6,7 +6,7 @@ function Project(proj) {
 
     return (
         <a href={proj.href}>
-          <figure className="figure greyOverlay">
+          <figure className="figure">
             <img className={mainImg} src={proj.image} alt={proj.alt} />
               <figcaption className={cap}>
                 <h3>{proj.projectTitle}</h3>

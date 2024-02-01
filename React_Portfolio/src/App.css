@@ -16,9 +16,7 @@
   box-sizing: border-box;
   list-style: none;
   margin: 0;
-  font-family: "Ibarra Real Nova";
-  /* font-family: "Gentium Plus"; */
-  /* font-family: "Cormorant Garamond"; */
+  font-family: "Ibarra Real Nova", "Gentium Plus";
 }
 
 body {
@@ -184,21 +182,19 @@ aside {
   margin-right: 2vw;
 }
 
-.figure img {
+/* .figure img {
   flex: 1 0 45%;
-}
+} */
 
 .mainImg {
+  flex: 1 0 45%;
   width: 50vw;
+  border: none;
 }
 
 img {
   width: 24vw;
   border: solid var(--dark-blue) 5px;
-}
-
-.greyOverlay {
-  background-color: var(--black);
 }
 
 .opacityFilter {
@@ -239,9 +235,9 @@ img {
   margin: 0 0 0 0;
 }
 
-#profile {
+.profile {
   display: flex;
-  width: 12vw;
+  width: 200px;
   border-radius: 10px;
   margin: 60px 0 0 0;
 }
@@ -267,71 +263,6 @@ button:hover {
   border: solid 2px var(--dark-blue);
 }
 
-@media only screen and (max-width: 853px) {
-  body {
-    background-size: 80%, contain;
-  }
-  .title {
-    font-size: 20px;
-  }
-  .contacts {
-    padding: 0 0 30px 0;
-  }
-  .menuBarText {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  body {
-    background-size: 100%, contain;
-  }
-  .menuBarText {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 413px) {
-  body {
-    background-size: 120%, contain;
-  }
-  /* .container {
-    flex-direction: column;
-    align-items: center;
-  } */
-  .title {
-    justify-content: center;
-  }
-  h2 {
-    border-right: 0;
-    border-bottom: thick solid var(--dark-blue);
-    padding: 0 0 5% 0;
-    margin: 0 0 10px 0;
-  }
-  article,
-  aside {
-    margin: 0 0 4vw 0;
-  }
-  .project-images {
-    justify-content: center;
-    margin: 0 15vw 0 15vw;
-    width: 50%;
-  }
-
-  .contact-me-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly;
-    width: 70%;
-  }
-  .contacts-spacing {
-    justify-content: center;
-    margin: 0 0 0 0;
-  }
-  #Contact-Me-Path {
-    padding: 0 0 2% 0;
-  }
-}
 
 /* For the popup elements that appear after a contact form submission */
 .popup {
@@ -373,6 +304,19 @@ button:hover {
   border: solid var(--gold) 2px;
 }
 
+.phoneMenu {
+  display: none;
+  position: sticky;
+  bottom: 0px;
+  /* background-color: var(--ash); */
+  border-top: solid var(--ash) 2px;
+  background: linear-gradient(0deg, var(--black), var(--black), transparent);
+  align-items: baseline;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0 5px 0;
+  
+}
 /* ------------------- Header ------------------- */
 header {
   display: flex;
@@ -570,12 +514,24 @@ input:focus, textarea:focus {
 
 /* ----------------- Portfolio ------------------ */
 
+.portfolioPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+
+.figureDiv {
+  justify-content: center;
+}
+
 .vanish {
   opacity: 0;
 }
 
 .nextImage {
   position: absolute;
+  border: none;
 }
 
 /* .fade-in {
@@ -628,6 +584,12 @@ input:focus, textarea:focus {
   margin: 0 13% 40px 0;
 }
 
+.secondIconDiv {
+  display: none;
+  /* justify-content: right; */
+  /* margin: 0 13% 40px 0; */
+}
+
 .arrow {
   width: 40px;
   border: none;
@@ -678,4 +640,122 @@ input:focus, textarea:focus {
   border: solid var(--gold) 3px;
   border-radius: 10px;
   margin: 0 10px 0 0;
+}
+
+
+/* ----------------- Window Size Adjustments ------------------ */
+
+@media only screen and (max-width: 1250px) {
+  .portfolioPage {
+    flex-direction: column;
+  }
+  .figure {
+    justify-content: center;
+    margin: 0;
+  }
+  .mainImg {
+    flex: none;
+    width: 80vw;
+  }
+  .descDiv {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 10% 0 10%;
+  }
+  .iconDiv {
+    display: none;
+  }
+  .secondIconDiv {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .profile {
+    width: 150px;
+  }
+
+  .iconDiv {
+    display: flex;
+    justify-content: normal;
+    margin: 0 0 40px 9%;
+  }
+  .secondIconDiv {
+    display: none;
+  }
+  /* body {
+    background-size: 80%, contain;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .contacts {
+    padding: 0 0 30px 0;
+  }
+  .menuBarText {
+    font-size: 14px;
+  } */
+}
+
+@media only screen and (max-width: 560px) {
+  header {
+    display: none;
+  }
+  .phoneMenu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mainImg {
+    width: 100vw;
+  }
+
+  body {
+    background-size: 100%, contain;
+  }
+  /* .menuBarText {
+    display: none;
+  } */
+}
+
+@media only screen and (max-width: 413px) {
+  body {
+    background-size: 120%, contain;
+  }
+  /* .container {
+    flex-direction: column;
+    align-items: center;
+  } */
+  .title {
+    justify-content: center;
+  }
+  h2 {
+    border-right: 0;
+    border-bottom: thick solid var(--dark-blue);
+    padding: 0 0 5% 0;
+    margin: 0 0 10px 0;
+  }
+  article,
+  aside {
+    margin: 0 0 4vw 0;
+  }
+  .project-images {
+    justify-content: center;
+    margin: 0 15vw 0 15vw;
+    width: 50%;
+  }
+
+  .contact-me-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 70%;
+  }
+  .contacts-spacing {
+    justify-content: center;
+    margin: 0 0 0 0;
+  }
+  #Contact-Me-Path {
+    padding: 0 0 2% 0;
+  }
 }
