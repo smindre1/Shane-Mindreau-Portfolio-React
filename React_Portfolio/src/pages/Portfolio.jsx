@@ -6,13 +6,14 @@ import PawIcon from "../assets/images/icons/Paw_Icon.svg"
 import WeatherIcon from "../assets/images/icons/Weather_Icon.svg"
 import QuizIcon from "../assets/images/icons/Quiz_Icon.svg"
 import Arrow from "../assets/images/Arrow.svg"
+import RedArrow from "../assets/images/redArrow.svg"
 // import Github from "../assets/images/icons/Github_Icon.svg"
 
 import { useState, useRef, useEffect } from "react";
 
 const Portfolio = () => {
   const [display, setDisplay] = useState(0);
-  // const [text, setText] = useState(0);
+  const [disabledArw, setDisabledArw] = useState(false);
   const oldMain = useRef(null);
   const newMain = useRef(null);
   const textBody = useRef(null);
@@ -101,7 +102,15 @@ const Portfolio = () => {
   `;
 
   useEffect(() => {
-    
+    const leftBtns = document.getElementsByClassName("leftArrowBtn");
+    const rightBtns = document.getElementsByClassName("rightArrowBtn");
+    if(disabledArw) {
+      leftBtns[0].setAttribute("disabled", "");
+      leftBtns[1].setAttribute("disabled", "");
+      rightBtns[0].setAttribute("disabled", "");
+      rightBtns[1].setAttribute("disabled", "");
+    }
+
     oldMain.current.classList.add("vanish");
     newMain.current.classList.remove("hide");
     
@@ -109,8 +118,15 @@ const Portfolio = () => {
     textBody.current.style.animationFillMode = 'forwards';
     newMain.current.style.animation = 'fadeIn 1.25s';
     newMain.current.style.animationFillMode = 'forwards';
-    setTimeout(() => {oldMain.current.classList.remove("vanish");
-    newMain.current.classList.add("hide"); textBody.current.style.animation = '';}, 2000)
+    setTimeout(() => {
+      oldMain.current.classList.remove("vanish");
+      newMain.current.classList.add("hide"); 
+      textBody.current.style.animation = '';
+      setDisabledArw(false);
+      leftBtns[0].removeAttribute("disabled", "");
+      leftBtns[1].removeAttribute("disabled", "");
+      rightBtns[0].removeAttribute("disabled", "");
+      rightBtns[1].removeAttribute("disabled", "");}, 2000)
     
 
     
@@ -145,20 +161,20 @@ const Portfolio = () => {
           </div>
           {/* This secondIconDiv is for when the layout of the site changes according to a medium window display size */}
           <div className="flexRow secondIconDiv">
-            <button className="leftArrowBtn" onClick={() => {0 != display ? setDisplay(display - 1) : setDisplay(range)}}> <img className="arrow" src={Arrow}></img> </button>
+            <button className="leftArrowBtn" onClick={() => {0 != display ? setDisplay(display - 1) : setDisplay(range); setDisabledArw(true)}}> <img className="arrow" src={disabledArw ? RedArrow : Arrow}></img> </button>
             <img className="iconFadeLeft" src={0 != display ? projects[display - 1].icon : projects[range].icon}></img>
             <img className="icon" src={projects[display].icon} ></img>
             <img className="iconFadeRight" src={range != display ? projects[display + 1].icon : projects[0].icon}></img>
-            <button className="rightArrowBtn" onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0)}}> <img className="arrow" src={Arrow}></img> </button>
+            <button className="rightArrowBtn" onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0); setDisabledArw(true)}}> <img className="arrow" src={disabledArw ? RedArrow : Arrow}></img> </button>
           </div>
         </div>
       </div>
       <div className="flexRow iconDiv">
-        <button className="leftArrowBtn" onClick={() => {0 != display ? setDisplay(display - 1) : setDisplay(range)}}> <img className="arrow" src={Arrow}></img> </button>
+        <button className="leftArrowBtn" onClick={() => {0 != display ? setDisplay(display - 1) : setDisplay(range); setDisabledArw(true)}}> <img className="arrow" src={disabledArw ? RedArrow : Arrow}></img> </button>
         <img className="iconFadeLeft" src={0 != display ? projects[display - 1].icon : projects[range].icon}></img>
         <img className="icon" src={projects[display].icon} ></img>
         <img className="iconFadeRight" src={range != display ? projects[display + 1].icon : projects[0].icon}></img>
-        <button className="rightArrowBtn" onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0)}}> <img className="arrow" src={Arrow}></img> </button>
+        <button className="rightArrowBtn" onClick={() => {range != display ? setDisplay(display + 1) : setDisplay(0); setDisabledArw(true)}}> <img className="arrow" src={disabledArw ? RedArrow : Arrow}></img> </button>
       </div>
     </div>
     // <div className="testTwo"></div>

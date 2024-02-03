@@ -1,6 +1,6 @@
 :root {
   --green: #57b288;
-  --dark-blue: #020A3D;
+  --dark-blue: #020a3d;
 
   --red: #941b0c;
   --gold: #fcc127;
@@ -95,7 +95,7 @@ section section {
 article,
 aside {
   display: inline-block;
-  margin: 0 2vw 0 0;
+  
 }
 
 .projects {
@@ -194,7 +194,7 @@ aside {
 
 img {
   width: 24vw;
-  border: solid var(--dark-blue) 5px;
+  border: solid var(--black) 5px;
 }
 
 .opacityFilter {
@@ -263,7 +263,6 @@ button:hover {
   border: solid 2px var(--dark-blue);
 }
 
-
 /* For the popup elements that appear after a contact form submission */
 .popup {
   position: fixed;
@@ -304,19 +303,6 @@ button:hover {
   border: solid var(--gold) 2px;
 }
 
-.phoneMenu {
-  display: none;
-  position: sticky;
-  bottom: 0px;
-  /* background-color: var(--ash); */
-  border-top: solid var(--ash) 2px;
-  background: linear-gradient(0deg, var(--black), var(--black), transparent);
-  align-items: baseline;
-  width: 100%;
-  height: 50px;
-  padding: 5px 0 5px 0;
-  
-}
 /* ------------------- Header ------------------- */
 header {
   display: flex;
@@ -362,11 +348,13 @@ header {
   margin: 0 0 20px 0;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--ash);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border: solid var(--lightgold) 2px;
   border-radius: 3px;
   color: var(--lightgold);
@@ -375,6 +363,8 @@ input:focus, textarea:focus {
 }
 
 .formDiv {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -440,12 +430,14 @@ input:focus, textarea:focus {
 }
 
 /* --------------- About Me Page ---------------- */
-.about-page {
+.aboutPage {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   margin: 0 0 50px 0;
 }
 
-.subtitle{
+.subtitle {
   font-weight: normal;
   color: var(--gold);
   font-size: 48px;
@@ -455,6 +447,7 @@ input:focus, textarea:focus {
 
 .bio {
   flex-basis: 45%;
+  margin: 0 2vw 0 0;
 }
 
 .role {
@@ -492,25 +485,22 @@ input:focus, textarea:focus {
 }
 
 .testingOne {
-  background-color: #001D3D;
+  background-color: #001d3d;
   background-color: var(--dark-blue);
   width: 50vw;
-  height: 50vh;
+  height: 80vh;
   margin: 20px;
   border: solid var(--gold);
 }
 
-
 /* A border test located on portfolio */
 .testTwo {
-
   width: 90vw;
   height: 90vh;
   margin: 0 auto 40px auto;
   opacity: 90%;
   border: solid var(--darkgold) 10px;
 }
-
 
 /* ----------------- Portfolio ------------------ */
 
@@ -595,7 +585,7 @@ input:focus, textarea:focus {
   border: none;
 }
 
-.arrow:hover{
+.arrow:hover {
   cursor: pointer;
   /* width: 50px;  */
   /* margin: 0 0px 0 10px; */
@@ -640,6 +630,49 @@ input:focus, textarea:focus {
   border: solid var(--gold) 3px;
   border-radius: 10px;
   margin: 0 10px 0 0;
+}
+
+/* ------------------ Resume -------------------- */
+
+.resumePage {
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+/* ----------------- Phone Classes ------------------ */
+.phoneMenu {
+  display: none;
+  position: sticky;
+  bottom: 0px;
+  /* background-color: var(--ash); */
+  border-top: solid var(--ash) 2px;
+  background: linear-gradient(0deg, var(--black), var(--black), transparent);
+  align-items: baseline;
+  width: 100%;
+  /* height: 50px; */
+}
+
+.phoneMenuDiv {
+  position: sticky;
+  padding: 5px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.mobileIcons {
+  width: 40px;
+  border: none;
+}
+
+/* These will show only one position for an html item at a time depending on screen size */
+.mobileItem {
+  display: none;
+}
+
+.notMobileItem {
+  display: flex;
 }
 
 
@@ -697,6 +730,38 @@ input:focus, textarea:focus {
   } */
 }
 
+@media only screen and (max-width: 700px) {
+  .aboutPage {
+    flex-direction: column;
+  }
+
+  .mobileItem {
+    display: flex;
+  }
+
+  .notMobileItem {
+    display: none;
+  }
+
+  .bio {
+    margin: 20px 4vw 0 4vw;
+  }
+
+  .profile {
+    margin: 0 0 0 0;
+  }
+
+  .contactForm {
+    width: 80vw;
+  }
+  .formDiv {
+    flex-direction: column;
+  }
+  .formSection {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   header {
     display: none;
@@ -705,7 +770,7 @@ input:focus, textarea:focus {
     display: flex;
     justify-content: center;
   }
-  
+
   .mainImg {
     width: 100vw;
   }
@@ -716,16 +781,24 @@ input:focus, textarea:focus {
   /* .menuBarText {
     display: none;
   } */
+
+  .resumePage {
+    margin: 20px 4vw 0 4vw;
+  }
+
+  .contact-page {
+    margin: 20px 4vw 0 4vw;
+  }
 }
 
-@media only screen and (max-width: 413px) {
+/* @media only screen and (max-width: 413px) {
   body {
     background-size: 120%, contain;
   }
-  /* .container {
+  .container {
     flex-direction: column;
     align-items: center;
-  } */
+  }
   .title {
     justify-content: center;
   }
@@ -758,4 +831,4 @@ input:focus, textarea:focus {
   #Contact-Me-Path {
     padding: 0 0 2% 0;
   }
-}
+} */

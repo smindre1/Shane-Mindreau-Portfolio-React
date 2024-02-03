@@ -78,7 +78,7 @@ const ContactForm = () => {
   return (
     <form className="contactForm" autoComplete="off" onSubmit={handleSubmit}>
       {/* <h2>Contact</h2> */}
-      <div ref={divId} className="flexRow formDiv">
+      <div ref={divId} className="formDiv">
         <div ref={nameId} className="flexColumn formSection">
           <input className="formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Full Name cannot be blank</p>
@@ -88,7 +88,7 @@ const ContactForm = () => {
           <p className="errorTxt hide">Email cannot be blank</p>
         </div>
       </div>
-      <div className="flexRow formDiv">
+      <div className="formDiv">
         <div ref={subjectId} className="flexColumn formSection">
           <input className="formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Subject cannot be blank</p>
