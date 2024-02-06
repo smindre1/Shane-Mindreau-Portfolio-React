@@ -1,4 +1,3 @@
-import Project from "../components/Project";
 import Path1 from "../assets/images/song-finder-custom-image.png"
 import Path2 from "../assets/images/Present-List-Custom-Image.png"
 import Path3 from "../assets/images/project-image-placeholder.png"
@@ -139,11 +138,11 @@ const Portfolio = () => {
       <div className="portfolioPage">
         <div className="flexRow figureDiv">
           <figure ref={oldMain} className="figure">
-            <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
+            <img className="mainImg" src={projects[display].image} alt={projects[display].alt} />
           </figure>
           <figure ref={newMain} className="figure hide nextImage">
             <style>{displayAnimation}</style>
-            <img className="mainImg opacityFilter" src={projects[display].image} alt={projects[display].alt} />
+            <img className="mainImg" src={projects[display].image} alt={projects[display].alt} />
           </figure>
         </div>
         

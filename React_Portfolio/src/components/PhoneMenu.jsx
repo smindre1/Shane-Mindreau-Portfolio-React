@@ -23,17 +23,16 @@ function PhoneMenu() {
         pageSelection();
     }, [about, portfolio, contact, resume])
     
-    // {about ? "highlight menuBarText" : "menuBarText"}
     return (
-    <nav className="phoneMenu">
-        <div  className="phoneMenuDiv">
+
+    <div className="phoneMenuDiv">
+        <nav  className="phoneMenu">
             <a href="/" className={about ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={HomeIcon}></img></a>
             <a href="/Portfolio" className={portfolio ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={PortfolioIcon}></img></a>
             <a href="/Contacts" className={contact ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={ContactsIcon}></img></a>
             <a href="/Resume" className={resume ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={ResumeIcon}></img></a>
-        </div>
-        
-    </nav>
+        </nav>
+    </div>
     );
   }
   

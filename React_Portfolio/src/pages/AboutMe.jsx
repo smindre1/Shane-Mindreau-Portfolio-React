@@ -1,4 +1,11 @@
-import Face from "../assets/images/face-placeholder.jpg";
+import Face from "../assets/images/face-placeholder.jpg"
+import HTML from "../assets/images/icons/TechStack_Icons/HTML_Icon.svg"
+import CSS from "../assets/images/icons/TechStack_Icons/CSS_Icon.svg"
+import Javascript from "../assets/images/icons/TechStack_Icons/Javascript_Icon.svg"
+import React_Icon from "../assets/images/icons/TechStack_Icons/React_Icon.svg"
+import GraphQL from "../assets/images/icons/TechStack_Icons/GraphQL_DB_Icon.svg"
+import SQL from "../assets/images/icons/TechStack_Icons/SQL_DB_Icon.svg"
+import MongoDB from "../assets/images/icons/TechStack_Icons/MongoDB_Icon.svg"
 
 function AboutMe() {
   return (
@@ -19,12 +26,21 @@ function AboutMe() {
             </div>
           </div>
           
-          <h4 className="prgTitle">I'm Also Proficient In...</h4>
-          <p className="bodyText">- Node.js</p>
+          <h4 className="prgTitle">Tech Stack</h4>
+          <div>
+            <img className="techStackIcon" src={HTML} alt="HTML Icon"></img>
+            <img className="techStackIcon" src={CSS} alt="CSS Icon"></img>
+            <img className="techStackIcon" src={Javascript} alt="Javascript Icon"></img>
+            <img className="techStackIcon" src={React_Icon} alt="React Icon"></img>
+            <img className="techStackIcon" src={GraphQL} alt="GraphQL Icon"></img>
+            <img className="techStackIcon" src={SQL} alt="SQL Icon"></img>
+            <img className="techStackIcon" src={MongoDB} alt="MongoDB Icon"></img>
+          </div>
+          {/* <p className="bodyText">- Node.js</p>
           <p className="bodyText">- MERN stack</p>
           <p className="bodyText">- RESTful APIs</p>
           <p className="bodyText">- GraphQL APIs</p>
-          <p className="bodyText bulletPoint">*** And more in my Resume section!</p>
+          <p className="bodyText bulletPoint">*** And more in my Resume section!</p> */}
           <h4 className="prgTitle">Education</h4>
           <p className="bodyText">Full-Stack Certificate, Colombia University Coding Bootcamp</p>
           <p className="bodyText">BA Graphic Design, Binghamton University</p>

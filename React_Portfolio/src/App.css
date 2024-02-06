@@ -20,6 +20,8 @@
 }
 
 body {
+  /* display: flex;
+  min-width:0%; */
   background-color: var(--black);
   background-image: url(./assets/images/grunge-texture-1920x1080.jpg);
   background-size: cover;
@@ -178,14 +180,6 @@ aside {
   margin: 0 20px 1vw 0;
 }
 
-.leftFigure {
-  margin-right: 2vw;
-}
-
-/* .figure img {
-  flex: 1 0 45%;
-} */
-
 .mainImg {
   flex: 1 0 45%;
   width: 50vw;
@@ -196,15 +190,6 @@ img {
   width: 24vw;
   border: solid var(--black) 5px;
 }
-
-.opacityFilter {
-  opacity: 1;
-}
-
-/* figure:hover img {
-  opacity: 1;
-  border: solid var(--gold) 5px;
-} */
 
 .caption {
   position: absolute;
@@ -244,23 +229,6 @@ img {
 
 #projectLink {
   display: inline-block;
-}
-
-button:hover {
-  opacity: 1;
-  /* font-size: 20px;
-  padding: 14px 0 13.5px 0; */
-}
-
-.portfolioBtn {
-  width: 100%;
-  padding: 15px 0 15px 0;
-  background-color: var(--darkgold);
-  color: var(--dark-blue);
-  font-size: 18px;
-  font-weight: 900;
-  opacity: 0.75;
-  border: solid 2px var(--dark-blue);
 }
 
 /* For the popup elements that appear after a contact form submission */
@@ -384,6 +352,7 @@ textarea:focus {
   box-shadow: 0 0 10px var(--lightgold);
   border: solid var(--lightgold) 2px;
   background-color: var(--gold);
+  cursor: pointer;
 }
 
 .formSection {
@@ -482,6 +451,20 @@ textarea:focus {
 
 .bulletPoint {
   font-weight: bold;
+}
+
+.techStackIcon {
+  height: 50px;
+  width: 60px;
+  border: none;
+  padding: 5px 0 5px 0;
+  margin: 0 5px 0 0;
+}
+
+.techStackIcon:hover {
+  box-shadow: 0px 0px 15px var(--lightgold);
+  background-color: #fbd45d50;
+  transform: translateY(-6px);
 }
 
 .testingOne {
@@ -632,6 +615,13 @@ textarea:focus {
   margin: 0 10px 0 0;
 }
 
+.portfolioBtns:hover {
+  background-color: var(--darkgold);
+  color: var(--black);
+  box-shadow: 0px 0px 15px var(--lightgold);
+  cursor: pointer;
+}
+
 /* ------------------ Resume -------------------- */
 
 .resumePage {
@@ -640,25 +630,23 @@ textarea:focus {
 }
 
 /* ----------------- Phone Classes ------------------ */
-.phoneMenu {
-  display: none;
-  position: sticky;
-  bottom: 0px;
-  /* background-color: var(--ash); */
-  border-top: solid var(--ash) 2px;
-  background: linear-gradient(0deg, var(--black), var(--black), transparent);
-  align-items: baseline;
-  width: 100%;
-  /* height: 50px; */
-}
 
 .phoneMenuDiv {
-  position: sticky;
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  border-top: solid var(--ash) 2px;
+  background: linear-gradient(0deg, var(--black), var(--black), transparent);
+  width: 100%;
+  /* margin-top: auto; */
+}
+
+.phoneMenu {
   padding: 5px 0 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
+  width: 100%;
 }
 
 .mobileIcons {
@@ -731,6 +719,9 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 700px) {
+  .mainPage {
+    margin: 0 0 40px 0;
+  }
   .aboutPage {
     flex-direction: column;
   }
@@ -751,6 +742,11 @@ textarea:focus {
     margin: 0 0 0 0;
   }
 
+  .techStackIcon {
+    height: 45px;
+    width: 55px;
+  }
+
   .contactForm {
     width: 80vw;
   }
@@ -766,13 +762,13 @@ textarea:focus {
   header {
     display: none;
   }
-  .phoneMenu {
+  .phoneMenuDiv {
     display: flex;
     justify-content: center;
   }
 
   .mainImg {
-    width: 100vw;
+    width: 100%;
   }
 
   body {
@@ -790,45 +786,3 @@ textarea:focus {
     margin: 20px 4vw 0 4vw;
   }
 }
-
-/* @media only screen and (max-width: 413px) {
-  body {
-    background-size: 120%, contain;
-  }
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .title {
-    justify-content: center;
-  }
-  h2 {
-    border-right: 0;
-    border-bottom: thick solid var(--dark-blue);
-    padding: 0 0 5% 0;
-    margin: 0 0 10px 0;
-  }
-  article,
-  aside {
-    margin: 0 0 4vw 0;
-  }
-  .project-images {
-    justify-content: center;
-    margin: 0 15vw 0 15vw;
-    width: 50%;
-  }
-
-  .contact-me-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly;
-    width: 70%;
-  }
-  .contacts-spacing {
-    justify-content: center;
-    margin: 0 0 0 0;
-  }
-  #Contact-Me-Path {
-    padding: 0 0 2% 0;
-  }
-} */
