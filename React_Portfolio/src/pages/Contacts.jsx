@@ -8,7 +8,7 @@ import LinkedIn from "../assets/images/icons/LinkedIn_Icon.svg"
 function Contacts() {
   return (
     <div className="contact-page">
-      <h2 className='subtitle lineBreak'>Send Me A Message:</h2>
+      <h2 className='subtitle lineBreak'>Message Me</h2>
       <Form></Form>
       <nav className="flexRow contact-me-nav">
         <a href="tel:646-526-4839" className="contacts-spacing">

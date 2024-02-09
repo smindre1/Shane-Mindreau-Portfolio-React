@@ -222,8 +222,8 @@ img {
 
 .profile {
   display: flex;
-  width: 200px;
-  border-radius: 10px;
+  width: 350px;
+  border-radius: 185px;
   margin: 60px 0 0 0;
 }
 
@@ -399,6 +399,10 @@ textarea:focus {
 }
 
 /* --------------- About Me Page ---------------- */
+.circle {
+  shape-outside: circle(50%);
+}
+
 .aboutPage {
   display: flex;
   flex-direction: row;
@@ -433,6 +437,11 @@ textarea:focus {
   margin: 24px 0 12px 0;
 }
 
+.introDiv {
+  display: flex;
+  flex-direction: row;
+}
+
 .intro {
   color: var(--whiteash);
   font-size: 20px;
@@ -441,6 +450,7 @@ textarea:focus {
 .bodyText {
   color: var(--whiteash);
   font-size: 18px;
+  margin: 0 0 10px 0;
   /* border-left: solid var(--darkgold) 3px;
   padding: 0 0 0 10px; */
 }
@@ -663,6 +673,11 @@ textarea:focus {
   display: flex;
 }
 
+.mobileIntro {
+  display: none;
+  color: var(--whiteash);
+  font-size: 20px;
+}
 
 /* ----------------- Window Size Adjustments ------------------ */
 
@@ -691,11 +706,7 @@ textarea:focus {
   }
 }
 
-@media only screen and (max-width: 830px) {
-  .profile {
-    width: 150px;
-  }
-
+@media only screen and (max-width: 1060px) {
   .iconDiv {
     display: flex;
     justify-content: normal;
@@ -704,6 +715,14 @@ textarea:focus {
   .secondIconDiv {
     display: none;
   }
+}
+
+@media only screen and (max-width: 830px) {
+  .profile {
+    width: 235px;
+  }
+
+
   /* body {
     background-size: 80%, contain;
   }
@@ -718,7 +737,7 @@ textarea:focus {
   } */
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 755px) {
   .mainPage {
     margin: 0 0 40px 0;
   }
@@ -741,6 +760,10 @@ textarea:focus {
   .profile {
     margin: 0 0 0 0;
   }
+}
+
+@media only screen and (max-width: 700px) {
+
 
   .techStackIcon {
     height: 45px;
@@ -784,5 +807,62 @@ textarea:focus {
 
   .contact-page {
     margin: 20px 4vw 0 4vw;
+  }
+
+  .profile {
+    float: right;
+    shape-outside: ellipse(50% 50%);
+    margin-left: 1rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 530px) {
+  .introDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    display: none;
+  }
+
+  .mobileIntro {
+    display: flex;
+  }
+
+  .mobileItem {
+    margin: 0 0 10px 0;
+  }
+
+  .name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .role {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent);
+  }
+
+  .arrow {
+    width: 7.5vw;
+  }
+
+  .icon {
+    width: 19vw;
+    margin: 0 3.75vw;
+  }
+
+  .iconFadeLeft {
+    width: 15vw;
+  }
+
+  .iconFadeRight {
+    width: 15vw;
   }
 }
