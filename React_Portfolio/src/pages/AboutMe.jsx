@@ -43,7 +43,7 @@ function AboutMe() {
           <p className="bodyText">- GraphQL APIs</p>
           <p className="bodyText bulletPoint">*** And more in my Resume section!</p> */}
           <h4 className="prgTitle">Education</h4>
-          <p className="bodyText">Full-Stack Certificate, Colombia University Coding Bootcamp</p>
+          <p className="bodyText">Full-Stack Certificate, Columbia University</p>
           <p className="bodyText">BA Graphic Design, Binghamton University</p>
         </div>
       </article>

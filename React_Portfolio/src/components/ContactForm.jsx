@@ -56,6 +56,22 @@ const ContactForm = () => {
     !hidden ? event.target.parentElement.lastChild.classList.add("hide") : null;
   }
 
+  const handlePhone = (value) => {
+    if (!value) return;
+    const regex = /[\d]/g;
+    var phoneNumber = value.match(regex);
+    phoneNumber = phoneNumber.join('');
+    const numLength = phoneNumber.length;
+    if (numLength < 4) {
+      setNumber(phoneNumber)};
+    if (3 < numLength && numLength < 7) {
+      setNumber(`(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`);
+    };
+    if (numLength > 6) {
+      setNumber(`(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)} - ${phoneNumber.slice(6, 10)}`);
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     checkForm();
@@ -94,7 +110,7 @@ const ContactForm = () => {
           <p className="errorTxt hide">Subject cannot be blank</p>
         </div>
         <div ref={numberId} className="flexColumn formSection">
-          <input className="formFields" type="text" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handleChange(e)}} />
+          <input className="formFields" type="tel" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handlePhone(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Phone Number cannot be blank</p>
         </div>
       </div>

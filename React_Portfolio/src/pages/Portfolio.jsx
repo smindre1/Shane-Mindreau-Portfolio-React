@@ -1,4 +1,4 @@
-import Path1 from "../assets/images/song-finder-custom-image.png"
+import Path1 from "../assets/images/displays/Pet_Display.svg"
 import Path2 from "../assets/images/Present-List-Custom-Image.png"
 import Path3 from "../assets/images/project-image-placeholder.png"
 import PawIcon from "../assets/images/icons/Paw_Icon.svg"
@@ -18,17 +18,17 @@ const Portfolio = () => {
   const textBody = useRef(null);
 
   const projects = [
-    // {
-    //   href: "https://smindre1.github.io/Song-Finder/",
-    //   repo: "https://github.com/smindre1/Song-Finder",
-    //   image: Path1,
-    //   alt: "Song Finder Display Image",
-    //   icon: "",
-    //   projectTitle: "Song Finder",
-    //   desc: "Code Used: HTML, CSS, & JS",
-    //   purpose: "",
-    //   techStack: "",
-    // },
+    {
+      href: "https://pawsandfound-dd3dbebb5f23.herokuapp.com/",
+      repo: "https://github.com/smindre1/PawsAndFound",
+      image: Path1,
+      alt: "Paws And Found Display Image",
+      icon: PawIcon,
+      projectTitle: "Paws And Found",
+      desc: "This is a reactive MERN application using Apollo to run GraphQL API queries on our backend server.",
+      purpose: "Me and my collaborators have created a missing pets blog in which users can post and reply to animals they have either lost or found.",
+      techStack: "",
+    },
     // {
     //   href: "https://present-list-fc60525bdd4f.herokuapp.com/",
     //   repo: "https://github.com/smindre1/Present-List?tab=readme-ov-file",
@@ -40,17 +40,6 @@ const Portfolio = () => {
     //   purpose: "",
     //   techStack: "",
     // },
-    {
-      href: "https://pawsandfound-dd3dbebb5f23.herokuapp.com/",
-      repo: "https://github.com/smindre1/PawsAndFound",
-      image: Path3,
-      alt: "Paws And Found Display Image",
-      icon: PawIcon,
-      projectTitle: "Paws And Found",
-      desc: "This is a reactive MERN application using Apollo to run GraphQL API queries on our backend server.",
-      purpose: "Me and my collaborators have created a lost and found pet blog in which users can post and reply about animals they have lost or found.",
-      techStack: "",
-    },
     {
       href: "https://smindre1.github.io/Weather-App/",
       repo: "https://github.com/smindre1/Weather-App",

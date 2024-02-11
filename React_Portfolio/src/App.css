@@ -183,7 +183,7 @@ aside {
 .mainImg {
   flex: 1 0 45%;
   width: 50vw;
-  border: none;
+  border:  solid var(--gold) 5px;
 }
 
 img {
@@ -792,6 +792,9 @@ textarea:focus {
 
   .mainImg {
     width: 100%;
+    /* border: solid var(--gold) 5px; */
+    border: none;
+    border-bottom: solid var(--gold) 5px;
   }
 
   body {
