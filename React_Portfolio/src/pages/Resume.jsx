@@ -2,8 +2,9 @@ function Resume() {
     return (
     <div className="flexColumn resumePage">
         <h2 className="subtitle">Work In Progress</h2>
-        <p>Resume coming soon!</p>
-        <div className="testingOne"></div>
+        <div className="resume">
+            <h2 className="resTitle">Shane Mindreau</h2>
+        </div>
     </div>
     );
   }

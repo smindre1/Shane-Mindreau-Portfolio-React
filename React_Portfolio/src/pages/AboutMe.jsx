@@ -28,21 +28,42 @@ function AboutMe() {
           </div>
           
           <h4 className="prgTitle">Tech Stack</h4>
-          <div>
-            <img className="techStackIcon" src={HTML} alt="HTML Icon"></img>
-            <img className="techStackIcon" src={CSS} alt="CSS Icon"></img>
-            <img className="techStackIcon" src={Javascript} alt="Javascript Icon"></img>
-            <img className="techStackIcon" src={React_Icon} alt="React Icon"></img>
-            <img className="techStackIcon" src={GraphQL} alt="GraphQL Icon"></img>
-            <img className="techStackIcon" src={SQL} alt="SQL Icon"></img>
-            <img className="techStackIcon" src={MongoDB} alt="MongoDB Icon"></img>
+          <div className="techStack">
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={HTML} alt="HTML Icon"></img>
+              <p className="techLabel">HTML5</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={CSS} alt="CSS Icon"></img>
+              <p className="techLabel">CSS</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={Javascript} alt="Javascript Icon"></img>
+              <p className="techLabel">Javascript</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={React_Icon} alt="React Icon"></img>
+              <p className="techLabel">React.js</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={GraphQL} alt="GraphQL Icon"></img>
+              <p className="techLabel">GraphQL</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={SQL} alt="SQL Icon"></img>
+              <p className="techLabel">SQL</p>
+            </div>
+            <div className="techIconDiv">
+              <img className="techStackIcon" src={MongoDB} alt="MongoDB Icon"></img>
+              <p className="techLabel">MongoDB</p>
+            </div>
           </div>
           {/* <p className="bodyText">- Node.js</p>
           <p className="bodyText">- MERN stack</p>
           <p className="bodyText">- RESTful APIs</p>
           <p className="bodyText">- GraphQL APIs</p>
           <p className="bodyText bulletPoint">*** And more in my Resume section!</p> */}
-          <h4 className="prgTitle">Education</h4>
+          <h4 className="prgTitle educationTitle">Education</h4>
           <p className="bodyText">Full-Stack Certificate, Columbia University</p>
           <p className="bodyText">BA Graphic Design, Binghamton University</p>
         </div>

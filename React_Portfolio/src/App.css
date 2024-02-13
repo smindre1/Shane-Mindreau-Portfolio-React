@@ -97,7 +97,6 @@ section section {
 article,
 aside {
   display: inline-block;
-  
 }
 
 .projects {
@@ -183,7 +182,7 @@ aside {
 .mainImg {
   flex: 1 0 45%;
   width: 50vw;
-  border:  solid var(--ash) 2px;
+  border: solid var(--ash) 2px;
   /* border:  solid var(--darkgold) 2px; */
 }
 
@@ -463,28 +462,50 @@ textarea:focus {
 .bulletPoint {
   font-weight: bold;
 }
+.educationTitle {
+  margin: 10px 0 12px 0;
+}
+
+.techStack {
+  display: flex;
+  flex-direction: row;
+}
 
 .techStackIcon {
   height: 50px;
   width: 60px;
   border: none;
   padding: 5px 0 5px 0;
-  margin: 0 5px 0 0;
+  /* margin: 0 5px 0 0; */
 }
 
-.techStackIcon:hover {
+/* .techStackIcon:hover {
+  box-shadow: 0px 0px 15px var(--lightgold);
+  background-color: #fbd45d50;
+  transform: translateY(-6px);
+} */
+
+.techIconDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px 2px 2px;
+}
+
+.techIconDiv:hover {
   box-shadow: 0px 0px 15px var(--lightgold);
   background-color: #fbd45d50;
   transform: translateY(-6px);
 }
 
-.testingOne {
-  background-color: #001d3d;
-  background-color: var(--dark-blue);
-  width: 50vw;
-  height: 80vh;
-  margin: 20px;
-  border: solid var(--gold);
+.techLabel {
+  opacity: 0;
+  color: var(--lightgold);
+}
+
+.techIconDiv:hover .techLabel {
+  opacity: 1;
 }
 
 /* A border test located on portfolio */
@@ -638,9 +659,27 @@ textarea:focus {
 
 .resumePage {
   justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   /* height: 100vh; */
 }
 
+.resume {
+  /* background-color: #001d3d; */
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 60vw;
+  height: 80vh;
+  margin: 20px;
+  border: solid var(--darkgold);
+  color: black;
+}
+
+.resTitle {
+  font-size: 40px;
+  margin: 10px 0 0 0;
+}
 /* ----------------- Phone Classes ------------------ */
 
 .phoneMenuDiv {
@@ -724,7 +763,6 @@ textarea:focus {
     width: 235px;
   }
 
-
   /* body {
     background-size: 80%, contain;
   }
@@ -765,8 +803,6 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 700px) {
-
-
   .techStackIcon {
     height: 45px;
     width: 55px;
@@ -797,7 +833,7 @@ textarea:focus {
     border: none;
     /* border-bottom: solid var(--ash) 2px; */
     mask-image: linear-gradient(to top, transparent 0%, white 4%);
-  /* This is for older browsers */
+    /* This is for older browsers */
     -webkit-mask-image: linear-gradient(to top, transparent 0%, white 4%);
   }
 
@@ -821,9 +857,7 @@ textarea:focus {
     shape-outside: ellipse(50% 50%);
     margin-left: 1rem;
   }
-
 }
-
 
 @media only screen and (max-width: 530px) {
   .introDiv {
@@ -856,6 +890,14 @@ textarea:focus {
     background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent);
   }
 
+  .subtitle {
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+  .description {
+    color: var(--darkgold);
+  }
   .arrow {
     width: 7.5vw;
   }
