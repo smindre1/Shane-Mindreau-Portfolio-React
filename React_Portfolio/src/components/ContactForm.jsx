@@ -58,10 +58,17 @@ const ContactForm = () => {
 
   const handlePhone = (value) => {
     if (!value) return;
+    // Resets any non-numbers that the user inputs
+    const letterRegex = /[\D]/g;
+    if (value.match(letterRegex)) {setNumber('')};
+    
+    // Takes the inputted numbers and formats them into a phone number template
     const regex = /[\d]/g;
     var phoneNumber = value.match(regex);
+    if (value.match(regex)) {
     phoneNumber = phoneNumber.join('');
-    const numLength = phoneNumber.length;
+    }
+    const numLength = phoneNumber?.length;
     if (numLength < 4) {
       setNumber(phoneNumber)};
     if (3 < numLength && numLength < 7) {

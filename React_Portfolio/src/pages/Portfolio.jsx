@@ -1,7 +1,8 @@
 import Path1 from "../assets/images/displays/Pet_Display.svg"
-import Path2 from "../assets/images/Present-List-Custom-Image.png"
+import Path2 from "../assets/images/displays/Present_Display.svg"
 import Path3 from "../assets/images/project-image-placeholder.png"
 import PawIcon from "../assets/images/icons/Paw_Icon.svg"
+import PresentIcon from "../assets/images/icons/Present_Icon.svg"
 import WeatherIcon from "../assets/images/icons/Weather_Icon.svg"
 import QuizIcon from "../assets/images/icons/Quiz_Icon.svg"
 import Arrow from "../assets/images/Arrow.svg"
@@ -25,21 +26,21 @@ const Portfolio = () => {
       alt: "Paws And Found Display Image",
       icon: PawIcon,
       projectTitle: "Paws And Found",
-      desc: "This is a reactive MERN application using Apollo to run GraphQL API queries on our backend server.",
-      purpose: "Me and my collaborators have created a missing pets blog in which users can post and reply to animals they have either lost or found.",
+      desc: "This is a reactive MERN application using Apollo to run GraphQL API queries on our backend server. This was created by me, Brandon Rivera, and Nat Rodriguez.",
+      purpose: "Welcome to our missing pets blog in which users can post and reply to animals they have either lost or found.",
       techStack: "",
     },
-    // {
-    //   href: "https://present-list-fc60525bdd4f.herokuapp.com/",
-    //   repo: "https://github.com/smindre1/Present-List?tab=readme-ov-file",
-    //   image: Path2,
-    //   alt: "Present List Display Image",
-    //   icon: "",
-    //   projectTitle: "Present List",
-    //   desc: "Code Used: HTML, CSS, JS, SQL",
-    //   purpose: "",
-    //   techStack: "",
-    // },
+    {
+      href: "https://present-list-fc60525bdd4f.herokuapp.com/",
+      repo: "https://github.com/smindre1/Present-List?tab=readme-ov-file",
+      image: Path2,
+      alt: "Present List Display Image",
+      icon: PresentIcon,
+      projectTitle: "Present List",
+      desc: "This is a dynamic MVC application that utilizes a mySQL database backend. This was created by me, Affan Kamal, and Joseph Aro.",
+      purpose: "Welcome to our holiday gift planning application! The purpose of this is to create seperate lists for each holiday or each important person in your life, and throughout the year if you get an idea for a wonderful gift for someone add it to your list. Then the next time a holiday or birthday rolls around you will already know what to get everyone!",
+      techStack: "Code Used: HTML, CSS, JS, SQL",
+    },
     {
       href: "https://smindre1.github.io/Weather-App/",
       repo: "https://github.com/smindre1/Weather-App",

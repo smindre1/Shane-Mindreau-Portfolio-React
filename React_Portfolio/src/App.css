@@ -183,7 +183,8 @@ aside {
 .mainImg {
   flex: 1 0 45%;
   width: 50vw;
-  border:  solid var(--gold) 5px;
+  border:  solid var(--ash) 2px;
+  /* border:  solid var(--darkgold) 2px; */
 }
 
 img {
@@ -569,6 +570,7 @@ textarea:focus {
 
 .secondIconDiv {
   display: none;
+  height: 100px;
   /* justify-content: right; */
   /* margin: 0 13% 40px 0; */
 }
@@ -792,9 +794,11 @@ textarea:focus {
 
   .mainImg {
     width: 100%;
-    /* border: solid var(--gold) 5px; */
     border: none;
-    border-bottom: solid var(--gold) 5px;
+    /* border-bottom: solid var(--ash) 2px; */
+    mask-image: linear-gradient(to top, transparent 0%, white 4%);
+  /* This is for older browsers */
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, white 4%);
   }
 
   body {
