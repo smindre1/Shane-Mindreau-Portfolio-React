@@ -1,6 +1,7 @@
 import Path1 from "../assets/images/displays/Pet_Display.svg"
 import Path2 from "../assets/images/displays/Present_Display.svg"
-import Path3 from "../assets/images/project-image-placeholder.png"
+import Path3 from "../assets/images/displays/Weather_Display.svg"
+import Path4 from "../assets/images/project-image-placeholder.png"
 import PawIcon from "../assets/images/icons/Paw_Icon.svg"
 import PresentIcon from "../assets/images/icons/Present_Icon.svg"
 import WeatherIcon from "../assets/images/icons/Weather_Icon.svg"
@@ -55,7 +56,7 @@ const Portfolio = () => {
     {
       href: "https://smindre1.github.io/quiz-game/",
       repo: "https://github.com/smindre1/quiz-game",
-      image: Path3,
+      image: Path4,
       alt: "Quiz Game Display Image",
       icon: QuizIcon,
       projectTitle: "Quiz Game",

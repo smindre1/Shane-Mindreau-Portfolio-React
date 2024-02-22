@@ -31,6 +31,10 @@ body {
   /* font-family: sans-serif; */
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 p {
   color: var(--gold);
 }
@@ -667,19 +671,78 @@ textarea:focus {
 .resume {
   /* background-color: #001d3d; */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   background-color: #ffffff;
   width: 60vw;
-  height: 80vh;
   margin: 20px;
+  padding: 0 28px;
   border: solid var(--darkgold);
   color: black;
 }
 
+.resHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .resTitle {
-  font-size: 40px;
+  color: var(--black);
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
   margin: 10px 0 0 0;
 }
+
+.resText {
+  color: var(--black);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.resSecBreak {
+  margin-bottom: 14px;
+}
+
+.prgBreak {
+  margin-bottom: 14px;
+}
+
+.bold {
+  color: var(--black);
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+
+.italic {
+  color: var(--black);
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+}
+
+.secTitle {
+  display: flex;
+  justify-content: center;
+  color: var(--black);
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+}
+
+.list {
+  list-style: circle;
+}
+
+.gap {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ----------------- Phone Classes ------------------ */
 
 .phoneMenuDiv {

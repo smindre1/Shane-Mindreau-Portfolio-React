@@ -16,7 +16,7 @@ function AboutMe() {
         <div>
           <h3 className="role">Full-Stack Web Developer</h3>
           <div className="introDiv">
-            <p className="intro">Welcome! I'm Shane, a full-stack web developer with a passion for building creative and reactive digital projects. I am specialized in using React.js to make dynamic front-end designs as well as MongoDB/SQL databases for robust data management.</p>
+            <p className="intro">Welcome! I'm Shane Mindreau, a full-stack web developer with a passion for building creative and reactive digital projects. I am specialized in using React.js to make dynamic front-end designs as well as MongoDB/SQL databases for robust data management.</p>
             {/* This appear only for screens 560px and below */}
             <div className="flexColumn mobileItem">
                 <img className="profile" src={Face} alt="Profile Image" /> 
