@@ -533,6 +533,7 @@ textarea:focus {
 
 .figureDiv {
   justify-content: center;
+  align-items: flex-start;
 }
 
 .vanish {

@@ -32,7 +32,7 @@ function Resume() {
           <h3 className="secTitle">PROJECTS</h3>
           <div className="prgBreak">
             <p className="resText">
-              <b className="bold">Paws And Found |</b> <br></br>github.com/smindre1/PawsAndFound | pawsandfound-dd3dbebb5f23.herokuapp.com
+              <b className="bold">Paws And Found |</b> github.com/smindre1/PawsAndFound | pawsandfound-dd3dbebb5f23.herokuapp.com
             </p>
             <p className="resText prgBreak">
               <b className="bold italic">Role in Project: </b>
@@ -57,7 +57,7 @@ function Resume() {
           </div>
           <div className="prgBreak">
             <p className="resText">
-              <b className="bold">Present List |</b> <br></br>github.com/smindre1/Present-List | present-list-fc60525bdd4f.herokuapp.com
+              <b className="bold">Present List |</b> github.com/smindre1/Present-List | present-list-fc60525bdd4f.herokuapp.com
             </p>
             <p className="resText prgBreak">
               <b className="bold italic">Role in Project: </b>
@@ -80,25 +80,27 @@ function Resume() {
           </div>
           <div className="prgBreak">
             <p className="resText">
-              <b className="bold">Weather App |</b> <br></br>github.com/smindre1/Weather-App | smindre1.github.io/Weather-App
+              <b className="bold">Massage Salon Business Website |</b> https://github.com/smindre1/Spa-Maluge-Website | https://spamaluge.com/
+            </p>
+            <p className="resText">
+              <b className="bold">Massage Salon REST API |</b> https://github.com/smindre1/Spa_Maluge_Database
             </p>
             <p className="resText prgBreak">
               <b className="bold italic">Role in Project: </b>
-              Frontend and Backend developer
+              I built and designed the website as well as its RESTful API counterpart.
             </p>
             <ul>
               <li className="resText list">
                 <b className="bold">Summary: </b>
-                It is a weather app that takes a User's searched location and provides that location's current weather conditions and a five day forecast for
-                the location.
+                A modern Vite & React website for 'Spa Maluge' which offers a fast, interactive, and responsive experience. It showcases high-end massage services with a classical baroque theme. Customers can browse services, message the business, and make reservations. There are also secure, non-commercial webpages for business management.
               </li>
               <li className="resText list">
                 <b className="bold">Accomplished: </b>
-                This project shows my ability to work with third party API’s and use their data as I wish.
+                A dynamic, responsive and clean business website with an effective reservation system that utilizes a separate RESTful API. The business staff can easily manage the business reservations and more through the website, in a secure manner using user authentication.
               </li>
               <li className="resText list">
                 <b className="bold">Tools/Languages: </b>
-                HTML5, CSS, Javascript, and OpenWeather API.
+                HTML5, CSS, Javascript, Node.js, MongoDB, React and Vite.
               </li>
             </ul>
           </div>

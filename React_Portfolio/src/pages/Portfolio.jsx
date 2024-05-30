@@ -1,11 +1,13 @@
 import Path1 from "../assets/images/displays/Pet_Display.svg"
 import Path2 from "../assets/images/displays/Present_Display.svg"
 import Path3 from "../assets/images/displays/Weather_Display.svg"
-import Path4 from "../assets/images/project-image-placeholder.png"
+import Path4 from "../assets/images/displays/Massage_Salon_Display.svg"
+import Path5 from "../assets/images/project-image-placeholder.png"
 import PawIcon from "../assets/images/icons/Paw_Icon.svg"
 import PresentIcon from "../assets/images/icons/Present_Icon.svg"
 import WeatherIcon from "../assets/images/icons/Weather_Icon.svg"
 import QuizIcon from "../assets/images/icons/Quiz_Icon.svg"
+import MassageIcon from "../assets/images/icons/Massage_Icon.svg"
 import Arrow from "../assets/images/Arrow.svg"
 import RedArrow from "../assets/images/redArrow.svg"
 // import Github from "../assets/images/icons/Github_Icon.svg"
@@ -20,6 +22,17 @@ const Portfolio = () => {
   const textBody = useRef(null);
 
   const projects = [
+    {
+      href: "https://spamaluge.com/",
+      repo: "https://github.com/smindre1/Spa-Maluge-Website",
+      image: Path4,
+      alt: "Massage Parlor Display Image",
+      icon: MassageIcon,
+      projectTitle: "Spa Maluge (Massage Salon)",
+      desc: "A modern business website made with Vite & React that provides a fast, interactive, and responsive user experience. This website is for the purpose of displaying the high-end massage parlor known as 'Spa Maluge', displaying a variety of services in depth with a classical baroque style inspired theme.",
+      purpose: "The site features both commercial webpages meant for customers to browse information about the services and business, message the business directly, and to make a reservation. There are also non-commercial webpages that are meant for managing the business, protected with user authentication.",
+      techStack: "TechStack: HTML, CSS, JS, MongoDB",
+    },
     {
       href: "https://pawsandfound-dd3dbebb5f23.herokuapp.com/",
       repo: "https://github.com/smindre1/PawsAndFound",
@@ -40,7 +53,7 @@ const Portfolio = () => {
       projectTitle: "Present List",
       desc: "This is a dynamic MVC application that utilizes a mySQL database backend. This was created by me, Affan Kamal, and Joseph Aro.",
       purpose: "Welcome to our holiday gift planning application! The purpose of this is to create seperate lists for each holiday or each important person in your life, and throughout the year if you get an idea for a wonderful gift for someone add it to your list. Then the next time a holiday or birthday rolls around you will already know what to get everyone!",
-      techStack: "Code Used: HTML, CSS, JS, SQL",
+      techStack: "TechStack: HTML, CSS, JS, SQL",
     },
     {
       href: "https://smindre1.github.io/Weather-App/",
@@ -56,7 +69,7 @@ const Portfolio = () => {
     {
       href: "https://smindre1.github.io/quiz-game/",
       repo: "https://github.com/smindre1/quiz-game",
-      image: Path4,
+      image: Path5,
       alt: "Quiz Game Display Image",
       icon: QuizIcon,
       projectTitle: "Quiz Game",
