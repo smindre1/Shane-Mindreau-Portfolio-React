@@ -27,7 +27,7 @@ function Header() {
         <a href="/" className={about ? "highlight menuBarText" : "menuBarText"}>About Me</a>
         <a href="/Portfolio" className={portfolio ? "highlight menuBarText" : "menuBarText"}>Portfolio</a>
         <a href="/Contacts" className={contact ? "highlight menuBarText" : "menuBarText"}>Contacts</a>
-        <a href="https://drive.google.com/file/d/1M39cun0KzjoeAjzRTa_-5SDQHCz6IAJK/view?usp=sharing" target="_blank" className={resume ? "highlight menuBarText" : "menuBarText"}>Resume</a>
+        <a href="https://drive.google.com/file/d/1hhlTWV-XAbcyiVjyo_NWa3JYaHtBa27k/view?usp=sharing" target="_blank" className={resume ? "highlight menuBarText" : "menuBarText"}>Resume</a>
     </nav>
     </header>
     );
