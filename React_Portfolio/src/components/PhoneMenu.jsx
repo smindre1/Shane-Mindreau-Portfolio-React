@@ -30,7 +30,7 @@ function PhoneMenu() {
             <a href="/" className={about ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={HomeIcon}></img></a>
             <a href="/Portfolio" className={portfolio ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={PortfolioIcon}></img></a>
             <a href="/Contacts" className={contact ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={ContactsIcon}></img></a>
-            <a href="/Resume" className={resume ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={ResumeIcon}></img></a>
+            <a href="https://drive.google.com/file/d/1hhlTWV-XAbcyiVjyo_NWa3JYaHtBa27k/view?usp=sharing" target="_blank" className={resume ? "highlight menuBarText" : "menuBarText"}><img className="mobileIcons" src={ResumeIcon}></img></a>
         </nav>
     </div>
     );
